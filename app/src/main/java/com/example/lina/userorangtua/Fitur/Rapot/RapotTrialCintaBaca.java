@@ -15,7 +15,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class RapotTrial extends AppCompatActivity {
+public class RapotTrialCintaBaca extends AppCompatActivity {
     private RapotTrialModel rapotTrialModel;
     private TextView tvNama, tvKelas, tvProgram, tvNamaguru;
     private TextView tvSoal1, tvSoal2, tvSoal3, tvSoal4, tvSoal5, tvSoal6, tvSoal7, tvSoal8, tvSoal9, tvSoal10, tvSoal11, tvCatatan;

@@ -1,23 +1,24 @@
 package com.example.lina.userorangtua.Fitur.Rapot;
 
-import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.lina.userorangtua.Model.Rapot.RapotModel;
+import com.example.lina.userorangtua.Model.Rapot.DetailRapotKursusModel;
 import com.example.lina.userorangtua.R;
 
 import java.util.ArrayList;
 
 public class DetailRapotKursusAdapter extends RecyclerView.Adapter<DetailRapotKursusAdapter.ItemRowHolder>{
-    ArrayList<RapotModel> dataDetailrapot;
-    private Activity activity;
+    ArrayList<DetailRapotKursusModel> dataDetailrapot;
+    private Context activity;
 
-    public DetailRapotKursusAdapter(Activity activity, ArrayList<RapotModel> dataDetailrapot){
+    public DetailRapotKursusAdapter(Context activity, ArrayList<DetailRapotKursusModel> dataDetailrapot){
         this.dataDetailrapot = dataDetailrapot;
         this.activity = activity;
     }
@@ -31,9 +32,20 @@ public class DetailRapotKursusAdapter extends RecyclerView.Adapter<DetailRapotKu
 
     @Override
     public void onBindViewHolder(DetailRapotKursusAdapter.ItemRowHolder holder, int i) {
-        holder.tvNama.setText(dataDetailrapot.get(i).getNama());
+        final DetailRapotKursusModel detailRapotKursusModel = dataDetailrapot.get(i);
+
+        holder.tvNama.setText(dataDetailrapot.get(i).getNamalengkap());
         holder.tvKelas.setText(dataDetailrapot.get(i).getKelas());
-        holder.tvProgramlevel.setText(dataDetailrapot.get(i).getProgramlevel());
+        holder.tvProgram.setText(dataDetailrapot.get(i).getNamaprogram());
+        holder.tvLevel.setText(dataDetailrapot.get(i).getLevel());
+        holder.cvDetailrapotkursus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(activity, RapotKursusSudahTerisi.class);
+                intent.putExtra("idtrial", detailRapotKursusModel.getIdsiswabelajar());
+                activity.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -42,22 +54,16 @@ public class DetailRapotKursusAdapter extends RecyclerView.Adapter<DetailRapotKu
     }
 
     public class ItemRowHolder extends RecyclerView.ViewHolder {
-        protected TextView tvNama, tvKelas, tvProgramlevel;
+        protected TextView tvNama, tvKelas, tvProgram, tvLevel;
+        protected CardView cvDetailrapotkursus;
         public ItemRowHolder(View view) {
             super(view);
 
             this.tvNama = (TextView) view.findViewById(R.id.tvnama);
             this.tvKelas = (TextView) view.findViewById(R.id.tvkelas);
-            this.tvProgramlevel = (TextView) view.findViewById(R.id.tvprogramlevel);
-
-            view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    Intent intent = new Intent(v.getContext(), RapotKursusSudahTerisi.class);
-                    v.getContext().startActivity(intent);
-                }
-            });
+            this.tvProgram = (TextView) view.findViewById(R.id.tvprogram);
+            this.tvLevel = (TextView) view.findViewById(R.id.tvlevel);
+            this.cvDetailrapotkursus = (CardView) view.findViewById(R.id.cvdetailrapotkursus);
         }
     }
 }

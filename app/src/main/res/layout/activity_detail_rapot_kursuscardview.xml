@@ -6,7 +6,7 @@
     android:padding="5dp">
 
     <android.support.v7.widget.CardView
-        android:id="@+id/cv"
+        android:id="@+id/cvdetailrapotkursus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="2dp"
@@ -15,9 +15,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="horizontal"
-            android:paddingTop="30dp"
-            android:paddingBottom="30dp"
-            android:background="@color/colorPrimaryDark"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:background="@color/colorPrimary"
             android:layout_height="match_parent"
             android:paddingLeft="10dp">
 
@@ -33,8 +33,7 @@
                     android:gravity="center"
                     android:textSize="18dp"
                     android:fontFamily="@font/nunitosemibold"
-                    android:textColor="@color/white"
-                    android:text="Lina Meritha"/>
+                    android:textColor="@color/white" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -43,18 +42,25 @@
                     android:gravity="center"
                     android:textSize="14dp"
                     android:fontFamily="@font/nunitosemibold"
-                    android:textColor="#362240"
-                    android:text="TK A"/>
+                    android:textColor="#362240" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/tvprogramlevel"
+                    android:id="@+id/tvprogram"
                     android:layout_below="@+id/tvkelas"
                     android:gravity="center"
                     android:textSize="13dp"
                     android:textColor="#362240"
-                    android:fontFamily="@font/nunitosemibold"
-                    android:text="Cinta Baca - Level 1"/>
+                    android:fontFamily="@font/nunitosemibold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvlevel"
+                    android:layout_below="@+id/tvkelas"
+                    android:gravity="center"
+                    android:textSize="13dp"
+                    android:textColor="#362240"
+                    android:fontFamily="@font/nunitosemibold" />
             </LinearLayout>
         </LinearLayout>
     </android.support.v7.widget.CardView>
