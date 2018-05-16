@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BSmart Orangtua</string>
+    <string name="title_activity_buttom_navigation">ButtomNavigation</string>
+    <string name="title_jadwal">Jadwal</string>
+    <string name="title_rapot">Rapot</string>
+    <string name="title_pembayaran">Pembayaran</string>
+    <string name="title_kuisioner">Kuisioner</string>
+    <string name="title_profil">Profil</string>
+</resources>

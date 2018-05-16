@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.lina.userorangtua">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/parents"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Fitur.SplashScreen.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Fitur.Login.LoginForm" />
+        <activity
+            android:name=".Fitur.Menu.ButtomNavigation"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".Fitur.Kuisioner.DetailKuisionerBelumIsi"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".Fitur.Jadwal.DetailJadwalTrial"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".Fitur.Jadwal.DetailJadwalKursus"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".Fitur.Jadwal.JadwalTrial"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".Fitur.Jadwal.JadwalKursus"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".Fitur.Rapot.DetailRapotTrial"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".Fitur.Rapot.RapotTrial"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".Fitur.Rapot.DetailRapotKursus"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".Fitur.Rapot.RapotKursusBelumTerisi"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".Fitur.Rapot.RapotKursusSudahTerisi"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".Fitur.Rapot.RapotKursus"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".Fitur.Pembayaran.BelumBayar"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".Fitur.Pembayaran.SudahBayar"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".Fitur.Kuisioner.KuisionerBelumIsi"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".Fitur.Kuisioner.DetailKuisionerSudahIsi"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".Fitur.Kuisioner.KuisionerSudahIsi"
+            android:theme="@style/AppTheme2"></activity>
+    </application>
+
+</manifest>
