@@ -7,7 +7,7 @@ import com.example.lina.userorangtua.Model.Jadwal.JadwalTrialModel;
 import com.example.lina.userorangtua.Model.Login.ModelResultLogin;
 import com.example.lina.userorangtua.Model.Profil.ProfileResultModel;
 import com.example.lina.userorangtua.Model.Rapot.DetailRapotTrialResultModel;
-import com.example.lina.userorangtua.Model.Rapot.RapotTrialResultModel;
+import com.example.lina.userorangtua.Model.Rapot.RapotTrialModel;
 
 import retrofit2.Call;
 import retrofit2.Retrofit;
@@ -58,7 +58,7 @@ public class ApiService {
         Call<DetailRapotTrialResultModel> getDetailRapotTrial(@Path("id") int id);
 
         @GET("orturapotsiswa/rapottrial/{id}")
-        Call<RapotTrialResultModel> getRapotTrial(@Path("id") int id);
+        Call<RapotTrialModel> getRapotTrial(@Path("id") int id);
 
 
     }

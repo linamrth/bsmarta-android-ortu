@@ -70,7 +70,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/tvprogramlevel"
+                    android:id="@+id/tvprogram"
                     android:layout_below="@+id/tvkelas"
                     android:gravity="center"
                     android:textSize="14dp"
@@ -80,7 +80,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/tvnamaguru"
-                    android:layout_below="@+id/tvprogramlevel"
+                    android:layout_below="@+id/tvprogram"
                     android:gravity="center"
                     android:textSize="14dp"
                     android:textColor="#362240"
@@ -136,19 +136,19 @@
                         android:padding="5dp"
                         android:orientation="vertical">
                         <TextView
-                            android:id="@+id/tvsoal1"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_above="@id/tvjawaban1"
+                            android:layout_above="@id/tvsoal1"
                             android:fontFamily="@font/sourcesansprobolditalic"
                             android:gravity="center"
                             android:textSize="16dp"
                             android:textStyle="italic|bold"
-                            android:textColor="#362240"/>
+                            android:textColor="#362240"
+                            android:text="Pernah mengikuti program baca dan tulis"/>
                         <TextView
-                            android:id="@+id/tvjawaban1"
+                            android:id="@+id/tvsoal1"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
                             android:layout_width="wrap_content"
@@ -167,24 +167,24 @@
                         android:layout_height="wrap_content"
                         android:padding="5dp"
                         android:orientation="vertical">
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/tvsoal2"
+                            android:fontFamily="@font/sourcesansprobolditalic"
+                            android:gravity="center"
+                            android:textSize="16dp"
+                            android:textStyle="italic|bold"
+                            android:textColor="#362240"
+                            android:text="Pengenalan Huruf Vokal"/>
                         <TextView
                             android:id="@+id/tvsoal2"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_above="@id/tvjawaban2"
-                            android:fontFamily="@font/sourcesansprobolditalic"
-                            android:gravity="center"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
-                            android:textColor="#362240"/>
-                        <TextView
-                            android:id="@+id/tvjawaban2"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
                             android:fontFamily="@font/nunitosemibold"
                             android:gravity="center"
                             android:textSize="16dp" />
@@ -199,24 +199,24 @@
                         android:layout_height="wrap_content"
                         android:padding="5dp"
                         android:orientation="vertical">
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/tvsoal3"
+                            android:fontFamily="@font/sourcesansprobolditalic"
+                            android:gravity="center"
+                            android:textSize="16dp"
+                            android:textStyle="italic|bold"
+                            android:textColor="#362240"
+                            android:text="Pengenalan Huruf Konsonan"/>
                         <TextView
                             android:id="@+id/tvsoal3"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_above="@id/tvjawaban3"
-                            android:fontFamily="@font/sourcesansprobolditalic"
-                            android:gravity="center"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
-                            android:textColor="#362240"/>
-                        <TextView
-                            android:id="@+id/tvjawaban3"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
                             android:fontFamily="@font/nunitosemibold"
                             android:gravity="center"
                             android:textSize="16dp" />
@@ -231,24 +231,24 @@
                         android:layout_height="wrap_content"
                         android:padding="5dp"
                         android:orientation="vertical">
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/tvsoal4"
+                            android:fontFamily="@font/sourcesansprobolditalic"
+                            android:gravity="center"
+                            android:textSize="16dp"
+                            android:textStyle="italic|bold"
+                            android:textColor="#362240"
+                            android:text="Membaca Suku Kata Terbuka"/>
                         <TextView
                             android:id="@+id/tvsoal4"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_above="@id/tvjawaban4"
-                            android:fontFamily="@font/sourcesansprobolditalic"
-                            android:gravity="center"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
-                            android:textColor="#362240"/>
-                        <TextView
-                            android:id="@+id/tvjawaban4"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
                             android:fontFamily="@font/nunitosemibold"
                             android:gravity="center"
                             android:textSize="16dp" />
@@ -263,24 +263,24 @@
                         android:layout_height="wrap_content"
                         android:padding="5dp"
                         android:orientation="vertical">
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/tvsoal5"
+                            android:fontFamily="@font/sourcesansprobolditalic"
+                            android:gravity="center"
+                            android:textSize="16dp"
+                            android:textStyle="italic|bold"
+                            android:textColor="#362240"
+                            android:text="Membaca Suku Kata Tertutup"/>
                         <TextView
                             android:id="@+id/tvsoal5"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_above="@id/tvjawaban5"
-                            android:fontFamily="@font/sourcesansprobolditalic"
-                            android:gravity="center"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
-                            android:textColor="#362240"/>
-                        <TextView
-                            android:id="@+id/tvjawaban5"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
                             android:fontFamily="@font/nunitosemibold"
                             android:gravity="center"
                             android:textSize="16dp" />
@@ -295,24 +295,24 @@
                         android:layout_height="wrap_content"
                         android:padding="5dp"
                         android:orientation="vertical">
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/tvsoal6"
+                            android:fontFamily="@font/sourcesansprobolditalic"
+                            android:gravity="center"
+                            android:textSize="16dp"
+                            android:textStyle="italic|bold"
+                            android:textColor="#362240"
+                            android:text="Menulis Suku Kata Terbuka"/>
                         <TextView
                             android:id="@+id/tvsoal6"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_above="@id/tvjawaban6"
-                            android:fontFamily="@font/sourcesansprobolditalic"
-                            android:gravity="center"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
-                            android:textColor="#362240"/>
-                        <TextView
-                            android:id="@+id/tvjawaban6"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
                             android:fontFamily="@font/nunitosemibold"
                             android:gravity="center"
                             android:textSize="16dp" />
@@ -327,24 +327,24 @@
                         android:layout_height="wrap_content"
                         android:padding="5dp"
                         android:orientation="vertical">
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/tvsoal7"
+                            android:fontFamily="@font/sourcesansprobolditalic"
+                            android:gravity="center"
+                            android:textSize="16dp"
+                            android:textStyle="italic|bold"
+                            android:textColor="#362240"
+                            android:text="Menulis Suku Kata Terbuka"/>
                         <TextView
                             android:id="@+id/tvsoal7"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_above="@id/tvjawaban7"
-                            android:fontFamily="@font/sourcesansprobolditalic"
-                            android:gravity="center"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
-                            android:textColor="#362240"/>
-                        <TextView
-                            android:id="@+id/tvjawaban7"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
                             android:fontFamily="@font/nunitosemibold"
                             android:gravity="center"
                             android:textSize="16dp" />
@@ -359,24 +359,24 @@
                         android:layout_height="wrap_content"
                         android:padding="5dp"
                         android:orientation="vertical">
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/tvsoal8"
+                            android:fontFamily="@font/sourcesansprobolditalic"
+                            android:gravity="center"
+                            android:textSize="16dp"
+                            android:textStyle="italic|bold"
+                            android:textColor="#362240"
+                            android:text="Kemandirian"/>
                         <TextView
                             android:id="@+id/tvsoal8"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_above="@id/tvjawaban8"
-                            android:fontFamily="@font/sourcesansprobolditalic"
-                            android:gravity="center"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
-                            android:textColor="#362240"/>
-                        <TextView
-                            android:id="@+id/tvjawaban8"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
                             android:fontFamily="@font/nunitosemibold"
                             android:gravity="center"
                             android:textSize="16dp" />
@@ -391,24 +391,24 @@
                         android:layout_height="wrap_content"
                         android:padding="5dp"
                         android:orientation="vertical">
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/tvsoal9"
+                            android:fontFamily="@font/sourcesansprobolditalic"
+                            android:gravity="center"
+                            android:textSize="16dp"
+                            android:textStyle="italic|bold"
+                            android:textColor="#362240"
+                            android:text="Kemampuan Komunikasi"/>
                         <TextView
                             android:id="@+id/tvsoal9"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_above="@id/tvjawaban9"
-                            android:fontFamily="@font/sourcesansprobolditalic"
-                            android:gravity="center"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
-                            android:textColor="#362240"/>
-                        <TextView
-                            android:id="@+id/tvjawaban9"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
                             android:fontFamily="@font/nunitosemibold"
                             android:gravity="center"
                             android:textSize="16dp" />
@@ -423,24 +423,24 @@
                         android:layout_height="wrap_content"
                         android:padding="5dp"
                         android:orientation="vertical">
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/tvsoal10"
+                            android:fontFamily="@font/sourcesansprobolditalic"
+                            android:gravity="center"
+                            android:textSize="16dp"
+                            android:textStyle="italic|bold"
+                            android:textColor="#362240"
+                            android:text="Berkebutuhan Khusus"/>
                         <TextView
                             android:id="@+id/tvsoal10"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_above="@id/tvjawaban10"
-                            android:fontFamily="@font/sourcesansprobolditalic"
-                            android:gravity="center"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
-                            android:textColor="#362240"/>
-                        <TextView
-                            android:id="@+id/tvjawaban10"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
                             android:fontFamily="@font/nunitosemibold"
                             android:gravity="center"
                             android:textSize="16dp" />
@@ -455,24 +455,24 @@
                         android:layout_height="wrap_content"
                         android:padding="5dp"
                         android:orientation="vertical">
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/tvsoal11"
+                            android:fontFamily="@font/sourcesansprobolditalic"
+                            android:gravity="center"
+                            android:textSize="16dp"
+                            android:textStyle="italic|bold"
+                            android:textColor="#362240"
+                            android:text="Bergaransi"/>
                         <TextView
                             android:id="@+id/tvsoal11"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_above="@id/tvjawaban11"
-                            android:fontFamily="@font/sourcesansprobolditalic"
-                            android:gravity="center"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
-                            android:textColor="#362240"/>
-                        <TextView
-                            android:id="@+id/tvjawaban11"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
                             android:fontFamily="@font/nunitosemibold"
                             android:gravity="center"
                             android:textSize="16dp" />
@@ -488,19 +488,19 @@
                         android:padding="5dp"
                         android:orientation="vertical">
                         <TextView
-                            android:id="@+id/tvcatatan"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_above="@id/tvhasil"
+                            android:layout_above="@id/tvcatatan"
                             android:fontFamily="@font/sourcesansprobolditalic"
                             android:gravity="center"
                             android:textSize="16dp"
                             android:textStyle="italic|bold"
-                            android:textColor="#362240"/>
+                            android:textColor="#362240"
+                            android:text="Catatan"/>
                         <TextView
-                            android:id="@+id/tvhasil"
+                            android:id="@+id/tvcatatan"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
                             android:layout_width="wrap_content"

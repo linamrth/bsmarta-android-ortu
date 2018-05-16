@@ -13,6 +13,9 @@ public class DetailRapotTrialModel {
     @SerializedName("namaprogram")
     @Expose
     private String namaprogram;
+    @SerializedName("idtrial")
+    @Expose
+    private Integer idtrial;
 
     public String getNamalengkap() {
         return namalengkap;
@@ -36,5 +39,13 @@ public class DetailRapotTrialModel {
 
     public void setNamaprogram(String namaprogram) {
         this.namaprogram = namaprogram;
+    }
+
+    public Integer getIdtrial() {
+        return idtrial;
+    }
+
+    public void setIdtrial(Integer idtrial) {
+        this.idtrial = idtrial;
     }
 }
