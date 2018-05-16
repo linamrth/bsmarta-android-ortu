@@ -19,7 +19,7 @@ public class RapotTrial extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rapot_trial);
+        setContentView(R.layout.activity_rapot_trial_cintabaca);
         setTitle("Rapot Trial");
 
         rv = (RecyclerView) findViewById(R.id.rv);
