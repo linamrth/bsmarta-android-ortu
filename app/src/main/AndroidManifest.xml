@@ -51,10 +51,7 @@
             android:name=".Fitur.Rapot.DetailRapotKursus"
             android:theme="@style/AppTheme2" />
         <activity
-            android:name=".Fitur.Rapot.RapotKursusBelumTerisi"
-            android:theme="@style/AppTheme2" />
-        <activity
-            android:name=".Fitur.Rapot.RapotKursusSudahTerisi"
+            android:name=".Fitur.Rapot.RapotKursusStatus"
             android:theme="@style/AppTheme2" />
         <activity
             android:name=".Fitur.Rapot.RapotKursus"

@@ -44,12 +44,15 @@ public class DetailRapotTrialAdapter extends RecyclerView.Adapter<DetailRapotTri
                     Intent intent = new Intent(activity, RapotTrialCintaBaca.class);
                     intent.putExtra("idtrial", detailRapotTrialModel.getIdtrial());
                     intent.putExtra("namaprogram", detailRapotTrialModel.getNamaprogram());
+                    //Toast.makeText(activity, "" + detailRapotTrialModel.getNamaprogram(), Toast.LENGTH_SHORT).show();
+                    activity.startActivity(intent);
                 } else {
                     Intent intent = new Intent(activity, RapotTrialCintaMatika.class);
                     intent.putExtra("idtrial", detailRapotTrialModel.getIdtrial());
                     intent.putExtra("namaprogram", detailRapotTrialModel.getNamaprogram());
+                   //Toast.makeText(activity, "" + detailRapotTrialModel.getNamaprogram(), Toast.LENGTH_SHORT).show();
+                    activity.startActivity(intent);
                 }
-
             }
         });
     }

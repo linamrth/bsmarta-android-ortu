@@ -18,7 +18,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class DetailRapotKursus extends AppCompatActivity {
-    private ArrayList<DetailRapotKursusResultModel> dataDetailrapot = new ArrayList<>();
+    private ArrayList<DetailRapotKursusResultModel> dataDetailrapot;
     private RecyclerView rv;
     private DetailRapotKursusAdapter detailRapotKursusAdapter;
 

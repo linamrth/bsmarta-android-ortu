@@ -37,12 +37,12 @@ public class DetailRapotKursusAdapter extends RecyclerView.Adapter<DetailRapotKu
         holder.tvNama.setText(dataDetailrapot.get(i).getNamalengkap());
         holder.tvKelas.setText(dataDetailrapot.get(i).getKelas());
         holder.tvProgram.setText(dataDetailrapot.get(i).getNamaprogram());
-        holder.tvLevel.setText(dataDetailrapot.get(i).getLevel());
+        holder.tvLevel.setText("Level " + dataDetailrapot.get(i).getLevel());
         holder.cvDetailrapotkursus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activity, RapotKursusSudahTerisi.class);
-                intent.putExtra("idtrial", detailRapotKursusModel.getIdsiswabelajar());
+                Intent intent = new Intent(activity, RapotKursusStatus.class);
+                intent.putExtra("idsiswabelajar", detailRapotKursusModel.getIdsiswabelajar());
                 activity.startActivity(intent);
             }
         });
