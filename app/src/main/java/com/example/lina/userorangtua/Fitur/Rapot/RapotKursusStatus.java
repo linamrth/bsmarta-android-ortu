@@ -23,7 +23,7 @@ public class RapotKursusStatus extends AppCompatActivity {
     private ArrayList<RapotKursusStatusResultModel> dataRapotkursus;
     private RecyclerView rv;
     private RapotKursusStatusAdapter rapotKursusStatusAdapter;
-    private TextView tvTanggal, tvNamaguru, tvStatus;
+    private TextView tvHari, tvTanggal, tvNamaguru, tvStatus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +35,7 @@ public class RapotKursusStatus extends AppCompatActivity {
         Integer idsiswabelajar = intent.getIntExtra("idsiswabelajar", 0);
         Log.d("terserah", String.valueOf(idsiswabelajar));
 
+        tvHari = (TextView) findViewById(R.id.tvhari);
         tvTanggal = (TextView) findViewById(R.id.tvtanggal);
         tvNamaguru = (TextView) findViewById(R.id.tvnamaguru);
         tvStatus = (TextView) findViewById(R.id.tvstatusrapot);

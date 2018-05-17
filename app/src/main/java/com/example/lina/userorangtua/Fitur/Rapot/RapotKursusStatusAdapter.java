@@ -34,15 +34,28 @@ public class RapotKursusStatusAdapter extends RecyclerView.Adapter<RapotKursusSt
     public void onBindViewHolder(RapotKursusStatusAdapter.ItemRowHolder holder, int i) {
         final RapotKursusStatusModel rapotKursusStatusModel = dataRapotkursus.get(i);
 
+        holder.tvHari.setText(dataRapotkursus.get(i).getHari());
         holder.tvTanggal.setText(dataRapotkursus.get(i).getTanggal());
         holder.tvNamaguru.setText(dataRapotkursus.get(i).getNamaguru());
-        holder.tvStatus.setText(dataRapotkursus.get(i).getStatusrapotkursus());
+        String status;
+        if(dataRapotkursus.get(i).getStatusrapotkursus().equals("S")){
+            status = "Sudah Terisi";
+        } else {
+            status = "Belum Terisi";
+        }
+        holder.tvStatus.setText(status);
         holder.cvStatusrapot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activity, RapotKursus.class);
-                intent.putExtra("idgenerate", rapotKursusStatusModel.getIdgenerate());
-                activity.startActivity(intent);
+                if(rapotKursusStatusModel.getStatusrapotkursus().equals("S")){
+                    Intent intent = new Intent(activity, RapotKursus.class);
+                    intent.putExtra("idgenerate", rapotKursusStatusModel.getIdgenerate());
+                    activity.startActivity(intent);
+                } else {
+                    Intent intent = new Intent(activity, RapotKursusStatus.class);
+                    intent.putExtra("idgenerate", rapotKursusStatusModel.getIdgenerate());
+                    activity.startActivity(intent);
+                }
             }
         });
     }
@@ -53,24 +66,16 @@ public class RapotKursusStatusAdapter extends RecyclerView.Adapter<RapotKursusSt
     }
 
     public class ItemRowHolder extends RecyclerView.ViewHolder {
-        protected TextView tvTanggal, tvNamaguru, tvStatus;
+        protected TextView tvHari, tvTanggal, tvNamaguru, tvStatus;
         protected CardView cvStatusrapot;
         public ItemRowHolder(View view) {
             super(view);
 
+            this.tvHari = (TextView) view.findViewById(R.id.tvhari);
             this.tvTanggal = (TextView) view.findViewById(R.id.tvtanggal);
             this.tvNamaguru = (TextView) view.findViewById(R.id.tvnamaguru);
             this.tvStatus = (TextView) view.findViewById(R.id.tvstatusrapot);
             this.cvStatusrapot = (CardView) view.findViewById(R.id.cvstatusrapot);
-
-            view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    Intent intent = new Intent(v.getContext(), RapotKursus.class);
-                    v.getContext().startActivity(intent);
-                }
-            });
         }
     }
 }
