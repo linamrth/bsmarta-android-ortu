@@ -40,10 +40,16 @@ public class DetailRapotTrialAdapter extends RecyclerView.Adapter<DetailRapotTri
         holder.cvDetailRapotTrial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activity, RapotTrialCintaBaca.class);
-                intent.putExtra("idtrial", detailRapotTrialModel.getIdtrial());
-                intent.putExtra("namaprogram", detailRapotTrialModel.getNamaprogram());
-                activity.startActivity(intent);
+                if(detailRapotTrialModel.getNamaprogram().equals("Cinta Baca")){
+                    Intent intent = new Intent(activity, RapotTrialCintaBaca.class);
+                    intent.putExtra("idtrial", detailRapotTrialModel.getIdtrial());
+                    intent.putExtra("namaprogram", detailRapotTrialModel.getNamaprogram());
+                } else {
+                    Intent intent = new Intent(activity, RapotTrialCintaMatika.class);
+                    intent.putExtra("idtrial", detailRapotTrialModel.getIdtrial());
+                    intent.putExtra("namaprogram", detailRapotTrialModel.getNamaprogram());
+                }
+
             }
         });
     }

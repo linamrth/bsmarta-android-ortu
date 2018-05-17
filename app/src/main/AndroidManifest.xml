@@ -45,6 +45,9 @@
             android:name=".Fitur.Rapot.RapotTrialCintaBaca"
             android:theme="@style/AppTheme2" />
         <activity
+            android:name=".Fitur.Rapot.RapotTrialCintaMatika"
+            android:theme="@style/AppTheme2" />
+        <activity
             android:name=".Fitur.Rapot.DetailRapotKursus"
             android:theme="@style/AppTheme2" />
         <activity
