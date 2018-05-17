@@ -1,33 +1,31 @@
 package com.example.lina.userorangtua.Model.Kuisioner;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class KuisionerModel {
-    private String nama;
+    @SerializedName("namalengkap")
+    @Expose
+    private String namalengkap;
+    @SerializedName("kelas")
+    @Expose
     private String kelas;
-    private String programlevel;
-    private String tanggal;
-    private String namaguru;
-    private String statusbelumisi;
-    private String statussudahisi;
+    @SerializedName("namaprogram")
+    @Expose
+    private String namaprogram;
+    @SerializedName("level")
+    @Expose
+    private String level;
+    @SerializedName("idsiswabelajar")
+    @Expose
+    private Integer idsiswabelajar;
 
-    public KuisionerModel(String nama, String kelas, String programlevel) {
-        this.nama = nama;
-        this.kelas = kelas;
-        this.programlevel = programlevel;
+    public String getNamalengkap() {
+        return namalengkap;
     }
 
-    public KuisionerModel(String tanggal, String namaguru, String statusbelumisi, String statussudahisi) {
-        this.tanggal = tanggal;
-        this.namaguru = namaguru;
-        this.statusbelumisi = statusbelumisi;
-        this.statussudahisi = statussudahisi;
-    }
-
-    public String getNama() {
-        return nama;
-    }
-
-    public void setNama(String nama) {
-        this.nama = nama;
+    public void setNamalengkap(String namalengkap) {
+        this.namalengkap = namalengkap;
     }
 
     public String getKelas() {
@@ -38,43 +36,27 @@ public class KuisionerModel {
         this.kelas = kelas;
     }
 
-    public String getProgramlevel() {
-        return programlevel;
+    public String getNamaprogram() {
+        return namaprogram;
     }
 
-    public void setProgramlevel(String programlevel) {
-        this.programlevel = programlevel;
+    public void setNamaprogram(String namaprogram) {
+        this.namaprogram = namaprogram;
     }
 
-    public String getTanggal() {
-        return tanggal;
+    public String getLevel() {
+        return level;
     }
 
-    public void setTanggal(String tanggal) {
-        this.tanggal = tanggal;
+    public void setLevel(String level) {
+        this.level = level;
     }
 
-    public String getNamaguru() {
-        return namaguru;
+    public Integer getIdsiswabelajar() {
+        return idsiswabelajar;
     }
 
-    public void setNamaguru(String namaguru) {
-        this.namaguru = namaguru;
-    }
-
-    public String getStatusbelumisi() {
-        return statusbelumisi;
-    }
-
-    public void setStatusbelumisi(String statusbelumisi) {
-        this.statusbelumisi = statusbelumisi;
-    }
-
-    public String getStatussudahisi() {
-        return statussudahisi;
-    }
-
-    public void setStatussudahisi(String statussudahisi) {
-        this.statussudahisi = statussudahisi;
+    public void setIdsiswabelajar(Integer idsiswabelajar) {
+        this.idsiswabelajar = idsiswabelajar;
     }
 }

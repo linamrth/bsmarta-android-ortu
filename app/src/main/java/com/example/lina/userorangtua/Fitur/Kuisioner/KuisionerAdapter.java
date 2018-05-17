@@ -1,7 +1,8 @@
 package com.example.lina.userorangtua.Fitur.Kuisioner;
 
-import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,9 +16,9 @@ import java.util.ArrayList;
 
 public class KuisionerAdapter extends RecyclerView.Adapter<KuisionerAdapter.ItemRowHolder> {
     ArrayList<KuisionerModel> dataKuisioner;
-    private Activity activity;
+    private Context activity;
 
-    public KuisionerAdapter(Activity activity, ArrayList<KuisionerModel> dataKuisioner){
+    public KuisionerAdapter(Context activity, ArrayList<KuisionerModel> dataKuisioner){
         this.dataKuisioner = dataKuisioner;
         this.activity = activity;
     }
@@ -31,9 +32,20 @@ public class KuisionerAdapter extends RecyclerView.Adapter<KuisionerAdapter.Item
 
     @Override
     public void onBindViewHolder(ItemRowHolder holder, int i) {
-        holder.tvNama.setText(dataKuisioner.get(i).getNama());
+        final KuisionerModel kuisionerModel = dataKuisioner.get(i);
+
+        holder.tvNama.setText(dataKuisioner.get(i).getNamalengkap());
         holder.tvKelas.setText(dataKuisioner.get(i).getKelas());
-        holder.tvProgramlevel.setText(dataKuisioner.get(i).getProgramlevel());
+        holder.tvProgram.setText(dataKuisioner.get(i).getNamaprogram());
+        holder.tvLevel.setText("Level " + dataKuisioner.get(i).getLevel());
+        holder.cvKuisioner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(activity, DetailKuisioner.class);
+                intent.putExtra("idsiswabelajar", kuisionerModel.getIdsiswabelajar());
+                activity.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -42,22 +54,16 @@ public class KuisionerAdapter extends RecyclerView.Adapter<KuisionerAdapter.Item
     }
 
     public class ItemRowHolder extends RecyclerView.ViewHolder {
-        protected TextView tvNama, tvKelas, tvProgramlevel;
+        protected TextView tvNama, tvKelas, tvProgram, tvLevel;
+        protected CardView cvKuisioner;
         public ItemRowHolder(View view) {
             super(view);
 
             this.tvNama = (TextView) view.findViewById(R.id.tvnama);
             this.tvKelas = (TextView) view.findViewById(R.id.tvkelas);
-            this.tvProgramlevel = (TextView) view.findViewById(R.id.tvprogramlevel);
-
-            view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    Intent intent = new Intent(v.getContext(), DetailKuisionerSudahIsi.class);
-                    v.getContext().startActivity(intent);
-                }
-            });
+            this.tvProgram = (TextView) view.findViewById(R.id.tvprogram);
+            this.tvLevel = (TextView) view.findViewById(R.id.tvlevel);
+            this.cvKuisioner = (CardView) view.findViewById(R.id.cvkuisioner);
         }
     }
 }

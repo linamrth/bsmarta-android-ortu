@@ -24,9 +24,6 @@
             android:name=".Fitur.Menu.ButtomNavigation"
             android:theme="@style/AppTheme2" />
         <activity
-            android:name=".Fitur.Kuisioner.DetailKuisionerBelumIsi"
-            android:theme="@style/AppTheme2" />
-        <activity
             android:name=".Fitur.Jadwal.DetailJadwalTrial"
             android:theme="@style/AppTheme2" />
         <activity
@@ -57,20 +54,11 @@
             android:name=".Fitur.Rapot.RapotKursus"
             android:theme="@style/AppTheme2" />
         <activity
-            android:name=".Fitur.Pembayaran.BelumBayar"
+            android:name=".Fitur.Pembayaran.DetailPembayaran"
             android:theme="@style/AppTheme2" />
         <activity
-            android:name=".Fitur.Pembayaran.SudahBayar"
+            android:name=".Fitur.Kuisioner.DetailKuisioner"
             android:theme="@style/AppTheme2" />
-        <activity
-            android:name=".Fitur.Kuisioner.KuisionerBelumIsi"
-            android:theme="@style/AppTheme2" />
-        <activity
-            android:name=".Fitur.Kuisioner.DetailKuisionerSudahIsi"
-            android:theme="@style/AppTheme2" />
-        <activity
-            android:name=".Fitur.Kuisioner.KuisionerSudahIsi"
-            android:theme="@style/AppTheme2"></activity>
     </application>
 
 </manifest>

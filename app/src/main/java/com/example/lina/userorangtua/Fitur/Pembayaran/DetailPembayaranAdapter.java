@@ -12,26 +12,26 @@ import com.example.lina.userorangtua.R;
 
 import java.util.ArrayList;
 
-public class SudahBayarAdapter extends RecyclerView.Adapter<SudahBayarAdapter.ItemRowHolder> {
+public class DetailPembayaranAdapter extends RecyclerView.Adapter<DetailPembayaranAdapter.ItemRowHolder> {
     ArrayList<PembayaranModel> dataPembayaran;
     private Activity activity;
 
-    public SudahBayarAdapter (Activity activity, ArrayList<PembayaranModel> dataPembayaran){
+    public DetailPembayaranAdapter(Activity activity, ArrayList<PembayaranModel> dataPembayaran){
         this.dataPembayaran = dataPembayaran;
         this.activity = activity;
     }
 
     @Override
-    public SudahBayarAdapter.ItemRowHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.activity_sudah_bayarcardview, viewGroup, false);
-        SudahBayarAdapter.ItemRowHolder mh = new SudahBayarAdapter.ItemRowHolder(view);
+    public DetailPembayaranAdapter.ItemRowHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.activity_detail_pembayarancardview, viewGroup, false);
+        DetailPembayaranAdapter.ItemRowHolder mh = new DetailPembayaranAdapter.ItemRowHolder(view);
         return mh;
     }
 
     @Override
-    public void onBindViewHolder(SudahBayarAdapter.ItemRowHolder holder, int i) {
-        holder.tvTanggal.setText(dataPembayaran.get(i).getTanggal());
-        holder.tvStatus.setText(dataPembayaran.get(i).getStatus());
+    public void onBindViewHolder(DetailPembayaranAdapter.ItemRowHolder holder, int i) {
+  //      holder.tvTanggal.setText(dataPembayaran.get(i).getTanggal());
+//        holder.tvStatus.setText(dataPembayaran.get(i).getStatus());
     }
 
     @Override

@@ -11,30 +11,30 @@ import com.example.lina.userorangtua.R;
 
 import java.util.ArrayList;
 
-public class DetailKuisionerBelumIsi extends AppCompatActivity {
+public class DetailKuisioner extends AppCompatActivity {
     private ArrayList<KuisionerModel> dataKuisioner = new ArrayList<>();
     private RecyclerView rv;
-    private DetailKuisionerBelumIsiAdapter detailKuisionerBelumIsiAdapter;
+    private DetailKuisionerAdapter detailKuisionerSudahIsiAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_kuisioner_belum_isi);
+        setContentView(R.layout.activity_detail_kuisioner);
         setTitle("Daftar Kuisioner");
 
         rv = (RecyclerView) findViewById(R.id.rv);
 
-        createDetailKuisionerBelumIsi();
+        createDetailKuisionerSudahIsi();
 
-        detailKuisionerBelumIsiAdapter = new DetailKuisionerBelumIsiAdapter(this, dataKuisioner);
+        detailKuisionerSudahIsiAdapter = new DetailKuisionerAdapter(this, dataKuisioner);
         rv.setLayoutManager(new LinearLayoutManager(this));
-        rv.setAdapter(detailKuisionerBelumIsiAdapter);
+        rv.setAdapter(detailKuisionerSudahIsiAdapter);
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-    private void createDetailKuisionerBelumIsi() {
+    private void createDetailKuisionerSudahIsi() {
         for (int i=0; i<10; i++){
             KuisionerModel kuisioner = new KuisionerModel("Kamis, 17 Mei 2018", "Shifwatin", "Belum Terisi", "Sudah Terisi");
             dataKuisioner.add(kuisioner);

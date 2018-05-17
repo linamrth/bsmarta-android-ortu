@@ -4,7 +4,9 @@ import com.example.lina.userorangtua.Model.Jadwal.DetailJadwalKursusResultModel;
 import com.example.lina.userorangtua.Model.Jadwal.DetailJadwalTrialResultModel;
 import com.example.lina.userorangtua.Model.Jadwal.JadwalKursusResultModel;
 import com.example.lina.userorangtua.Model.Jadwal.JadwalTrialModel;
+import com.example.lina.userorangtua.Model.Kuisioner.KuisionerResultModel;
 import com.example.lina.userorangtua.Model.Login.ModelResultLogin;
+import com.example.lina.userorangtua.Model.Pembayaran.PembayaranResultModel;
 import com.example.lina.userorangtua.Model.Profil.ProfileResultModel;
 import com.example.lina.userorangtua.Model.Rapot.DetailRapotKursusResultModel;
 import com.example.lina.userorangtua.Model.Rapot.DetailRapotTrialResultModel;
@@ -71,5 +73,11 @@ public class ApiService {
 
         @GET("orturapotsiswa/rapotkursus/{id}")
         Call<RapotKursusModel> getRapotKursus(@Path("id") int id);
+
+        @GET("ortupembayaran/index/{id}")
+        Call<PembayaranResultModel> getPembayaran(@Path("id") int id);
+
+        @GET("ortukuisioner/index/{id}")
+        Call<KuisionerResultModel> getKuisioner(@Path("id") int id);
     }
 }

@@ -13,27 +13,27 @@ import com.example.lina.userorangtua.R;
 
 import java.util.ArrayList;
 
-public class DetailKuisionerBelumIsiAdapter extends RecyclerView.Adapter<DetailKuisionerBelumIsiAdapter.ItemRowHolder> {
+public class DetailKuisionerAdapter extends RecyclerView.Adapter<DetailKuisionerAdapter.ItemRowHolder> {
     ArrayList<KuisionerModel> dataKuisioner;
     private Activity activity;
 
-    public DetailKuisionerBelumIsiAdapter(Activity activity, ArrayList<KuisionerModel> dataKuisioner){
+    public DetailKuisionerAdapter(Activity activity, ArrayList<KuisionerModel> dataKuisioner){
         this.dataKuisioner = dataKuisioner;
         this.activity = activity;
     }
 
     @Override
-    public DetailKuisionerBelumIsiAdapter.ItemRowHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.activity_detail_kuisioner_belum_isicardview, viewGroup, false);
-        DetailKuisionerBelumIsiAdapter.ItemRowHolder mh = new DetailKuisionerBelumIsiAdapter.ItemRowHolder(view);
+    public DetailKuisionerAdapter.ItemRowHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.activity_detail_kuisionercardview, viewGroup, false);
+        DetailKuisionerAdapter.ItemRowHolder mh = new DetailKuisionerAdapter.ItemRowHolder(view);
         return mh;
     }
 
     @Override
-    public void onBindViewHolder(DetailKuisionerBelumIsiAdapter.ItemRowHolder holder, int i) {
+    public void onBindViewHolder(DetailKuisionerAdapter.ItemRowHolder holder, int i) {
         holder.tvTanggal.setText(dataKuisioner.get(i).getTanggal());
         holder.tvNamaguru.setText(dataKuisioner.get(i).getNamaguru());
-        holder.tvStatusbelumterisi.setText(dataKuisioner.get(i).getStatusbelumisi());
+        holder.tvStatussudahisi.setText(dataKuisioner.get(i).getStatussudahisi());
     }
 
     @Override
@@ -42,19 +42,19 @@ public class DetailKuisionerBelumIsiAdapter extends RecyclerView.Adapter<DetailK
     }
 
     public class ItemRowHolder extends RecyclerView.ViewHolder {
-        protected TextView tvTanggal, tvNamaguru, tvStatusbelumterisi;
+        protected TextView tvTanggal, tvNamaguru, tvStatussudahisi;
         public ItemRowHolder(View view) {
             super(view);
 
             this.tvTanggal = (TextView) view.findViewById(R.id.tvtanggal);
             this.tvNamaguru = (TextView) view.findViewById(R.id.tvnamaguru);
-            this.tvStatusbelumterisi = (TextView) view.findViewById(R.id.tvstatusrapot);
+            this.tvStatussudahisi = (TextView) view.findViewById(R.id.tvstatusrapot);
 
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
-                    Intent intent = new Intent(v.getContext(), KuisionerBelumIsi.class);
+                    Intent intent = new Intent(v.getContext(), KuisionerSudahIsi.class);
                     v.getContext().startActivity(intent);
                 }
             });

@@ -1,7 +1,8 @@
 package com.example.lina.userorangtua.Fitur.Pembayaran;
 
-import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,9 +16,9 @@ import java.util.ArrayList;
 
 public class PembayaranAdapter extends RecyclerView.Adapter<PembayaranAdapter.ItemRowHolder> {
     ArrayList<PembayaranModel> dataPembayaran;
-    private Activity activity;
+    private Context activity;
 
-    public PembayaranAdapter (Activity activity, ArrayList<PembayaranModel> dataPembayaran){
+    public PembayaranAdapter (Context activity, ArrayList<PembayaranModel> dataPembayaran){
         this.dataPembayaran = dataPembayaran;
         this.activity = activity;
     }
@@ -31,9 +32,20 @@ public class PembayaranAdapter extends RecyclerView.Adapter<PembayaranAdapter.It
 
     @Override
     public void onBindViewHolder(ItemRowHolder holder, int i) {
-        holder.tvNama.setText(dataPembayaran.get(i).getNama());
+        final PembayaranModel pembayaranModel = dataPembayaran.get(i);
+
+        holder.tvNama.setText(dataPembayaran.get(i).getNamalengkap());
         holder.tvKelas.setText(dataPembayaran.get(i).getKelas());
-        holder.tvProgramlevel.setText(dataPembayaran.get(i).getProgramlevel());
+        holder.tvProgram.setText(dataPembayaran.get(i).getNamaprogram());
+        holder.tvLevel.setText("Level " + dataPembayaran.get(i).getLevel());
+        holder.cvPembayaran.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(activity, DetailPembayaran.class);
+                intent.putExtra("idsiswabelajar", pembayaranModel.getIdsiswabelajar());
+                activity.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -42,22 +54,16 @@ public class PembayaranAdapter extends RecyclerView.Adapter<PembayaranAdapter.It
     }
 
     public class ItemRowHolder extends RecyclerView.ViewHolder {
-        protected TextView tvNama, tvKelas, tvProgramlevel;
+        protected TextView tvNama, tvKelas, tvProgram, tvLevel;
+        protected CardView cvPembayaran;
         public ItemRowHolder(View view) {
             super(view);
 
             this.tvNama = (TextView) view.findViewById(R.id.tvnama);
             this.tvKelas = (TextView) view.findViewById(R.id.tvkelas);
-            this.tvProgramlevel = (TextView) view.findViewById(R.id.tvprogramlevel);
-
-            view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    Intent intent = new Intent(v.getContext(), BelumBayar.class);
-                    v.getContext().startActivity(intent);
-                }
-            });
+            this.tvProgram = (TextView) view.findViewById(R.id.tvprogram);
+            this.tvLevel = (TextView) view.findViewById(R.id.tvlevel);
+            this.cvPembayaran = (CardView) view.findViewById(R.id.cvpembayaran);
         }
     }
 }
