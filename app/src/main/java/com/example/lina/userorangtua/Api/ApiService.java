@@ -8,6 +8,7 @@ import com.example.lina.userorangtua.Model.Login.ModelResultLogin;
 import com.example.lina.userorangtua.Model.Profil.ProfileResultModel;
 import com.example.lina.userorangtua.Model.Rapot.DetailRapotKursusResultModel;
 import com.example.lina.userorangtua.Model.Rapot.DetailRapotTrialResultModel;
+import com.example.lina.userorangtua.Model.Rapot.RapotKursusModel;
 import com.example.lina.userorangtua.Model.Rapot.RapotKursusStatusResultModel;
 import com.example.lina.userorangtua.Model.Rapot.RapotTrialModel;
 
@@ -67,5 +68,8 @@ public class ApiService {
 
         @GET("orturapotsiswa/viewrapotkursus/{id}")
         Call<RapotKursusStatusResultModel> getRapotKursusStatus(@Path("id") int id);
+
+        @GET("orturapotsiswa/rapotkursus/{id}")
+        Call<RapotKursusModel> getRapotKursus(@Path("id") int id);
     }
 }

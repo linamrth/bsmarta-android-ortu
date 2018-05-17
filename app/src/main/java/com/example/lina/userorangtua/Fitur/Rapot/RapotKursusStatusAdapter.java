@@ -51,10 +51,6 @@ public class RapotKursusStatusAdapter extends RecyclerView.Adapter<RapotKursusSt
                     Intent intent = new Intent(activity, RapotKursus.class);
                     intent.putExtra("idgenerate", rapotKursusStatusModel.getIdgenerate());
                     activity.startActivity(intent);
-                } else {
-                    Intent intent = new Intent(activity, RapotKursusStatus.class);
-                    intent.putExtra("idgenerate", rapotKursusStatusModel.getIdgenerate());
-                    activity.startActivity(intent);
                 }
             }
         });
