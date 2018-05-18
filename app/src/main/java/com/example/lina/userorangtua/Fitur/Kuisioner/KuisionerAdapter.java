@@ -41,7 +41,7 @@ public class KuisionerAdapter extends RecyclerView.Adapter<KuisionerAdapter.Item
         holder.cvKuisioner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activity, DetailKuisioner.class);
+                Intent intent = new Intent(activity, KuisionerStatus.class);
                 intent.putExtra("idsiswabelajar", kuisionerModel.getIdsiswabelajar());
                 activity.startActivity(intent);
             }

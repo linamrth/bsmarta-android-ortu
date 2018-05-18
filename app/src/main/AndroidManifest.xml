@@ -57,7 +57,13 @@
             android:name=".Fitur.Pembayaran.DetailPembayaran"
             android:theme="@style/AppTheme2" />
         <activity
-            android:name=".Fitur.Kuisioner.DetailKuisioner"
+            android:name=".Fitur.Kuisioner.KuisionerStatus"
+            android:theme="@style/AppTheme2"/>
+        <activity
+            android:name=".Fitur.Kuisioner.KuisionerLihat"
+            android:theme="@style/AppTheme2"/>
+        <activity
+            android:name=".Fitur.Kuisioner.KuisionerIsi"
             android:theme="@style/AppTheme2" />
     </application>
 
