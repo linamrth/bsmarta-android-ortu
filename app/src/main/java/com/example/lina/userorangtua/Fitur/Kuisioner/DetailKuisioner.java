@@ -36,8 +36,8 @@ public class DetailKuisioner extends AppCompatActivity {
 
     private void createDetailKuisionerSudahIsi() {
         for (int i=0; i<10; i++){
-            KuisionerModel kuisioner = new KuisionerModel("Kamis, 17 Mei 2018", "Shifwatin", "Belum Terisi", "Sudah Terisi");
-            dataKuisioner.add(kuisioner);
+//            KuisionerModel kuisioner = new KuisionerModel("Kamis, 17 Mei 2018", "Shifwatin", "Belum Terisi", "Sudah Terisi");
+  //          dataKuisioner.add(kuisioner);
         }
     }
 

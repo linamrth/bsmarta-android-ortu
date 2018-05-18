@@ -1,7 +1,6 @@
 package com.example.lina.userorangtua.Fitur.Kuisioner;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,9 +30,9 @@ public class DetailKuisionerAdapter extends RecyclerView.Adapter<DetailKuisioner
 
     @Override
     public void onBindViewHolder(DetailKuisionerAdapter.ItemRowHolder holder, int i) {
-        holder.tvTanggal.setText(dataKuisioner.get(i).getTanggal());
-        holder.tvNamaguru.setText(dataKuisioner.get(i).getNamaguru());
-        holder.tvStatussudahisi.setText(dataKuisioner.get(i).getStatussudahisi());
+//        holder.tvTanggal.setText(dataKuisioner.get(i).getTanggal());
+//        holder.tvNamaguru.setText(dataKuisioner.get(i).getNamaguru());
+//        holder.tvStatussudahisi.setText(dataKuisioner.get(i).getStatussudahisi());
     }
 
     @Override
@@ -54,8 +53,8 @@ public class DetailKuisionerAdapter extends RecyclerView.Adapter<DetailKuisioner
                 @Override
                 public void onClick(View v) {
 
-                    Intent intent = new Intent(v.getContext(), KuisionerSudahIsi.class);
-                    v.getContext().startActivity(intent);
+//                    Intent intent = new Intent(v.getContext(), KuisionerSudahIsi.class);
+  //                  v.getContext().startActivity(intent);
                 }
             });
         }
