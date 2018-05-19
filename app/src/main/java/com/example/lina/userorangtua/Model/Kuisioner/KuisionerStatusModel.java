@@ -15,7 +15,7 @@ public class KuisionerStatusModel {
     private String statuskuisioner;
     @SerializedName("idkuisioner")
     @Expose
-    private String idkuisioner;
+    private Integer idkuisioner;
 
     public String getTanggal() {
         return tanggal;
@@ -41,11 +41,11 @@ public class KuisionerStatusModel {
         this.statuskuisioner = statuskuisioner;
     }
 
-    public String getIdkuisioner() {
+    public Integer getIdkuisioner() {
         return idkuisioner;
     }
 
-    public void setIdkuisioner(String idkuisioner) {
+    public void setIdkuisioner(Integer idkuisioner) {
         this.idkuisioner = idkuisioner;
     }
 }

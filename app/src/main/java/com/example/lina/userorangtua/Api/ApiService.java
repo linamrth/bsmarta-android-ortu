@@ -4,6 +4,7 @@ import com.example.lina.userorangtua.Model.Jadwal.DetailJadwalKursusResultModel;
 import com.example.lina.userorangtua.Model.Jadwal.DetailJadwalTrialResultModel;
 import com.example.lina.userorangtua.Model.Jadwal.JadwalKursusResultModel;
 import com.example.lina.userorangtua.Model.Jadwal.JadwalTrialModel;
+import com.example.lina.userorangtua.Model.Kuisioner.KuisionerLihatModel;
 import com.example.lina.userorangtua.Model.Kuisioner.KuisionerResultModel;
 import com.example.lina.userorangtua.Model.Kuisioner.KuisionerStatusResultModel;
 import com.example.lina.userorangtua.Model.Login.ModelResultLogin;
@@ -87,5 +88,8 @@ public class ApiService {
 
         @GET("ortukuisioner/view/{id}")
         Call<KuisionerStatusResultModel> getKuisionerStatus(@Path("id") int id);
+
+        @GET("ortukuisioner/lihatkuisioner/{id}")
+        Call<KuisionerLihatModel> getKuisionerLihat(@Path("id") int id);
     }
 }
