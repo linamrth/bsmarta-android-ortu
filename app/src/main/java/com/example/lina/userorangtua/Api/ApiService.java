@@ -4,6 +4,7 @@ import com.example.lina.userorangtua.Model.Jadwal.DetailJadwalKursusResultModel;
 import com.example.lina.userorangtua.Model.Jadwal.DetailJadwalTrialResultModel;
 import com.example.lina.userorangtua.Model.Jadwal.JadwalKursusResultModel;
 import com.example.lina.userorangtua.Model.Jadwal.JadwalTrialModel;
+import com.example.lina.userorangtua.Model.Kuisioner.KuisionerIsiResultModel;
 import com.example.lina.userorangtua.Model.Kuisioner.KuisionerLihatModel;
 import com.example.lina.userorangtua.Model.Kuisioner.KuisionerResultModel;
 import com.example.lina.userorangtua.Model.Kuisioner.KuisionerStatusResultModel;
@@ -43,6 +44,17 @@ public class ApiService {
         Call<ModelResultLogin> login(
                 @Field("username") String username,
                 @Field("password") String password
+        );
+
+        @FormUrlEncoded
+        @POST("ortukuisioner/inputkuisioner/{id}")
+        Call<KuisionerIsiResultModel> kuisioner(
+                @Field("penguasaanmateri") Integer penguasaanmateri,
+                @Field("kemampuanmengajar") Integer kemampuanmengajar,
+                @Field("kedisiplinan") Integer kedisiplinan,
+                @Field("tanggungjawabdantingkahlaku") Integer tanggungjawabdantingkahlaku,
+                @Field("kerjasama") Integer kerjasama,
+                @Path("id") int id
         );
     }
 

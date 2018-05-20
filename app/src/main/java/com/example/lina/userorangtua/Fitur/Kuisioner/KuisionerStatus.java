@@ -24,6 +24,7 @@ public class KuisionerStatus extends AppCompatActivity {
     private RecyclerView rv;
     private KuisionerStatusAdapter kuisionerStatusAdapter;
     private TextView tvTanggal, tvNamaguru, tvStatus;
+    Integer idsiswabelajar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +33,7 @@ public class KuisionerStatus extends AppCompatActivity {
         setTitle("Daftar Kuisioner");
 
         Intent intent = getIntent();
-        Integer idsiswabelajar = intent.getIntExtra("idsiswabelajar", 0);
+        idsiswabelajar = intent.getIntExtra("idsiswabelajar", 0);
         Log.d("terserah", String.valueOf(idsiswabelajar));
 
         tvTanggal = (TextView) findViewById(R.id.tvtanggal);
@@ -41,6 +42,23 @@ public class KuisionerStatus extends AppCompatActivity {
 
         rv = (RecyclerView) findViewById(R.id.rv);
 
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item){
+        int id = item.getItemId();
+
+        if (id == android.R.id.home){
+            this.finish();
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         ApiService.services_get.getKuisionerStatus(idsiswabelajar).enqueue(new Callback<KuisionerStatusResultModel>() {
             @Override
             public void onResponse(Call<KuisionerStatusResultModel> call, Response<KuisionerStatusResultModel> response) {
@@ -57,18 +75,5 @@ public class KuisionerStatus extends AppCompatActivity {
 
             }
         });
-
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-    }
-
-    public boolean onOptionsItemSelected(MenuItem item){
-        int id = item.getItemId();
-
-        if (id == android.R.id.home){
-            this.finish();
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }
