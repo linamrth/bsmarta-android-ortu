@@ -17,7 +17,7 @@ import retrofit2.Response;
 
 public class JadwalTrial extends AppCompatActivity {
     private JadwalTrialModel jadwalTrialModel;
-    private TextView tvNama, tvKelas, tvSekolah, tvProgram, tvGuru, tvHari, tvTanggal, tvJam;
+    private TextView tvNama, tvKelas, tvProgram, tvGuru, tvHari, tvTanggal, tvJam;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,14 +29,13 @@ public class JadwalTrial extends AppCompatActivity {
         Integer idtrial = intent.getIntExtra("idtrial", 0);
         Log.d("terserah", String.valueOf(idtrial));
 
-        tvNama = (TextView) findViewById(R.id.tvisinama);
-        tvKelas = (TextView) findViewById(R.id.tvisikelas);
-        tvSekolah = (TextView) findViewById(R.id.tvisisekolah);
-        tvProgram = (TextView) findViewById(R.id.tvisiprogram);
-        tvGuru = (TextView) findViewById(R.id.tvisiguru);
-        tvHari = (TextView) findViewById(R.id.tvisihari);
-        tvTanggal = (TextView) findViewById(R.id.tvisitanggal);
-        tvJam = (TextView) findViewById(R.id.tvisijam);
+        tvNama = (TextView) findViewById(R.id.tvnama);
+        tvKelas = (TextView) findViewById(R.id.tvkelas);
+        tvProgram = (TextView) findViewById(R.id.tvprogram);
+        tvGuru = (TextView) findViewById(R.id.tvnamaguru);
+        tvHari = (TextView) findViewById(R.id.tvhari);
+        tvTanggal = (TextView) findViewById(R.id.tvtanggal);
+        tvJam = (TextView) findViewById(R.id.tvjam);
 
         ApiService.services_get.getJadwalTrial(idtrial).enqueue(new Callback<JadwalTrialModel>() {
             @Override
@@ -47,7 +46,6 @@ public class JadwalTrial extends AppCompatActivity {
 
                 tvNama.setText(jadwalTrialModel.getNamalengkap());
                 tvKelas.setText(jadwalTrialModel.getKelas());
-                tvSekolah.setText(jadwalTrialModel.getAsalsekolah());
                 tvProgram.setText(jadwalTrialModel.getNamaprogram());
                 tvGuru.setText(jadwalTrialModel.getNamaguru());
                 tvHari.setText(jadwalTrialModel.getHari());

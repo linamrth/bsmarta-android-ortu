@@ -14,6 +14,7 @@ import com.example.lina.userorangtua.Model.Kuisioner.KuisionerStatusResultModel;
 import com.example.lina.userorangtua.R;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -25,6 +26,7 @@ public class KuisionerStatus extends AppCompatActivity {
     private KuisionerStatusAdapter kuisionerStatusAdapter;
     private TextView tvTanggal, tvNamaguru, tvStatus;
     Integer idsiswabelajar;
+    Calendar mCalendar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +38,11 @@ public class KuisionerStatus extends AppCompatActivity {
         idsiswabelajar = intent.getIntExtra("idsiswabelajar", 0);
         Log.d("terserah", String.valueOf(idsiswabelajar));
 
-        tvTanggal = (TextView) findViewById(R.id.tvtanggal);
-        tvNamaguru = (TextView) findViewById(R.id.tvnamaguru);
-        tvStatus = (TextView) findViewById(R.id.tvstatuskuisioner);
+        tvTanggal = findViewById(R.id.tvtanggal);
+        tvNamaguru = findViewById(R.id.tvnamaguru);
+        tvStatus = findViewById(R.id.tvstatuskuisioner);
 
-        rv = (RecyclerView) findViewById(R.id.rv);
+        rv = findViewById(R.id.rv);
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -56,6 +58,7 @@ public class KuisionerStatus extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    //untuk finishnya biar bisa langsung ganti status belum terisi jd sudah terisi
     @Override
     protected void onResume() {
         super.onResume();

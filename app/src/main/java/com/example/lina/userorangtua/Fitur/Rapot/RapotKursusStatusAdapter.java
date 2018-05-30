@@ -2,12 +2,14 @@ package com.example.lina.userorangtua.Fitur.Rapot;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.lina.userorangtua.Model.Rapot.RapotKursusStatusModel;
 import com.example.lina.userorangtua.R;
@@ -40,8 +42,10 @@ public class RapotKursusStatusAdapter extends RecyclerView.Adapter<RapotKursusSt
         String status;
         if(dataRapotkursus.get(i).getStatusrapotkursus().equals("S")){
             status = "Sudah Terisi";
+            holder.logo.setBackgroundResource(R.drawable.ic_check_circle_black_24dp);
         } else {
             status = "Belum Terisi";
+            holder.logo.setBackgroundResource(R.drawable.ic_highlight_off_black_24dp);
         }
         holder.tvStatus.setText(status);
         holder.cvStatusrapot.setOnClickListener(new View.OnClickListener() {
@@ -51,6 +55,8 @@ public class RapotKursusStatusAdapter extends RecyclerView.Adapter<RapotKursusSt
                     Intent intent = new Intent(activity, RapotKursus.class);
                     intent.putExtra("idgenerate", rapotKursusStatusModel.getIdgenerate());
                     activity.startActivity(intent);
+                } else {
+                    Toast.makeText(activity, "Rapot Belum Terisi", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -63,7 +69,8 @@ public class RapotKursusStatusAdapter extends RecyclerView.Adapter<RapotKursusSt
 
     public class ItemRowHolder extends RecyclerView.ViewHolder {
         protected TextView tvHari, tvTanggal, tvNamaguru, tvStatus;
-        protected CardView cvStatusrapot;
+        protected ImageView logo;
+        protected LinearLayout cvStatusrapot;
         public ItemRowHolder(View view) {
             super(view);
 
@@ -71,7 +78,8 @@ public class RapotKursusStatusAdapter extends RecyclerView.Adapter<RapotKursusSt
             this.tvTanggal = (TextView) view.findViewById(R.id.tvtanggal);
             this.tvNamaguru = (TextView) view.findViewById(R.id.tvnamaguru);
             this.tvStatus = (TextView) view.findViewById(R.id.tvstatusrapot);
-            this.cvStatusrapot = (CardView) view.findViewById(R.id.cvstatusrapot);
+            this.logo = (ImageView) view.findViewById(R.id.logostatus);
+            this.cvStatusrapot = (LinearLayout) view.findViewById(R.id.cvstatusrapot);
         }
     }
 }

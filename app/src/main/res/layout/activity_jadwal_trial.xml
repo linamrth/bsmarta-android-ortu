@@ -7,35 +7,174 @@
     tools:context=".Fitur.Jadwal.JadwalTrial"
     android:id="@+id/fragmentrapot"
     android:orientation="vertical"
-    android:padding="20dp">
+    android:padding="10dp">
 
     <android.support.v7.widget.CardView
-        android:id="@+id/cv1"
+        android:id="@+id/cvinformasisiswa"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="15dp"
+        android:layout_height="wrap_content"
         app:cardElevation="3dp"
-        app:cardCornerRadius="7dp">
-
+        app:cardCornerRadius="10dp">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorPrimary"
-            android:padding="5dp"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/tvjudul2"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:textColor="#362240"
+                    android:fontFamily="@font/cookie"
+                    android:text="Informasi Siswa"
+                    android:layout_gravity="center"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="20dp"
-                android:fontFamily="@font/sourcesansprobolditalic"
-                android:gravity="center"
-                android:text="Jadwal Trial"
-                android:textSize="20dp"
-                android:textColor="#362240"/>
+                android:orientation="vertical"
+                android:layout_gravity="left"
+                android:layout_marginLeft="10dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:textColor="#362240"
+                        android:text="Nama Siswa"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:textColor="#362240"
+                        android:layout_marginLeft="5dp"
+                        android:text=" : "/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvnama"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:textColor="#362240" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:textColor="#362240"
+                        android:text="Kelas"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:textColor="#362240"
+                        android:layout_marginLeft="50dp"
+                        android:text=" : "/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvkelas"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:textColor="#362240" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:textColor="#362240"
+                        android:text="Program"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:textColor="#362240"
+                        android:layout_marginLeft="29dp"
+                        android:text=" : "/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvprogram"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:textColor="#362240"
+                        android:fontFamily="@font/nunitosemibold" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
 
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="3dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:textColor="#362240"
+                    android:fontFamily="@font/cookie"
+                    android:text="Informasi Jadwal Trial"
+                    android:layout_gravity="center"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -46,308 +185,133 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:orientation="vertical"
-                        android:weightSum="5">
+                        android:padding="5dp"
+                        android:orientation="vertical">
                         <TextView
-                            android:id="@+id/tvjudulnama"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_above="@id/tvisinama"
-                            android:fontFamily="@font/sourcesansprobolditalic"
-                            android:gravity="center"
-                            android:text="Nama Siswa"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
-                            android:textColor="#362240"/>
-
-                        <TextView
-                            android:id="@+id/tvisinama"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
+                            android:layout_marginBottom="8dp"
                             android:fontFamily="@font/nunitosemibold"
                             android:gravity="center"
-                            android:textSize="16dp" />
-
+                            android:textSize="14dp"
+                            android:textColor="#362240"
+                            android:text="Nama Guru"/>
+                        <TextView
+                            android:id="@+id/tvnamaguru"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nunitosemibold"
+                            android:textSize="14dp"
+                            android:textColor="#362240"/>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="#FFFFFF"/>
+                            android:background="#7F7E7F"
+                            android:layout_marginTop="1dp"/>
                     </LinearLayout>
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:orientation="vertical"
-                        android:weightSum="5">
+                        android:padding="5dp"
+                        android:orientation="vertical">
                         <TextView
-                            android:id="@+id/tvjudulkelas"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_above="@id/tvisikelas"
-                            android:fontFamily="@font/sourcesansprobolditalic"
-                            android:gravity="center"
-                            android:text="Kelas"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
-                            android:textColor="#362240"/>
-
-                        <TextView
-                            android:id="@+id/tvisikelas"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
+                            android:layout_marginBottom="8dp"
                             android:fontFamily="@font/nunitosemibold"
                             android:gravity="center"
-                            android:textSize="16dp" />
-
+                            android:textSize="14dp"
+                            android:textColor="#362240"
+                            android:text="Hari"/>
+                        <TextView
+                            android:id="@+id/tvhari"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nunitosemibold"
+                            android:gravity="center"
+                            android:textSize="14dp"
+                            android:textColor="#362240"/>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="#FFFFFF"/>
+                            android:background="#7F7E7F"
+                            android:layout_marginTop="1dp"/>
                     </LinearLayout>
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:orientation="vertical"
-                        android:weightSum="5">
+                        android:padding="5dp"
+                        android:orientation="vertical">
                         <TextView
-                            android:id="@+id/tvjudulsekolah"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_above="@id/tvisisekolah"
-                            android:fontFamily="@font/sourcesansprobolditalic"
-                            android:gravity="center"
-                            android:text="Sekolah"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
-                            android:textColor="#362240"/>
-
-                        <TextView
-                            android:id="@+id/tvisisekolah"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
+                            android:layout_marginBottom="8dp"
                             android:fontFamily="@font/nunitosemibold"
                             android:gravity="center"
-                            android:textSize="16dp" />
-
+                            android:textSize="14dp"
+                            android:textColor="#362240"
+                            android:text="Tanggal"/>
+                        <TextView
+                            android:id="@+id/tvtanggal"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nunitosemibold"
+                            android:gravity="center"
+                            android:textSize="14dp"
+                            android:textColor="#362240"/>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="#FFFFFF"/>
+                            android:background="#7F7E7F"
+                            android:layout_marginTop="1dp"/>
                     </LinearLayout>
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:orientation="vertical"
-                        android:weightSum="5">
+                        android:padding="5dp"
+                        android:orientation="vertical">
                         <TextView
-                            android:id="@+id/tvjudulprogram"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_above="@id/tvisiprogram"
-                            android:fontFamily="@font/sourcesansprobolditalic"
-                            android:gravity="center"
-                            android:text="Program"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
-                            android:textColor="#362240"/>
-
-                        <TextView
-                            android:id="@+id/tvisiprogram"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
+                            android:layout_marginBottom="8dp"
                             android:fontFamily="@font/nunitosemibold"
                             android:gravity="center"
-                            android:textSize="16dp" />
-
+                            android:textSize="14dp"
+                            android:textColor="#362240"
+                            android:text="Jam"/>
+                        <TextView
+                            android:id="@+id/tvjam"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nunitosemibold"
+                            android:gravity="center"
+                            android:textSize="14dp"
+                            android:textColor="#362240"/>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="#FFFFFF"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:orientation="vertical"
-                        android:weightSum="5">
-                        <TextView
-                            android:id="@+id/tvjudulguru"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_above="@id/tvisiguru"
-                            android:fontFamily="@font/sourcesansprobolditalic"
-                            android:gravity="center"
-                            android:text="Guru"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
-                            android:textColor="#362240"/>
-
-                        <TextView
-                            android:id="@+id/tvisiguru"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:fontFamily="@font/nunitosemibold"
-                            android:gravity="center"
-                            android:textSize="16dp" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="#FFFFFF"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:orientation="vertical"
-                        android:weightSum="5">
-                        <TextView
-                            android:id="@+id/tvjudulhari"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_above="@id/tvisihari"
-                            android:fontFamily="@font/sourcesansprobolditalic"
-                            android:gravity="center"
-                            android:text="Hari"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
-                            android:textColor="#362240"/>
-
-                        <TextView
-                            android:id="@+id/tvisihari"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:fontFamily="@font/nunitosemibold"
-                            android:gravity="center"
-                            android:textSize="16dp" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="#FFFFFF"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:orientation="vertical"
-                        android:weightSum="5">
-                        <TextView
-                            android:id="@+id/tvjudultanggal"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_above="@id/tvisitanggal"
-                            android:fontFamily="@font/sourcesansprobolditalic"
-                            android:gravity="center"
-                            android:text="Tanggal"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
-                            android:textColor="#362240"/>
-
-                        <TextView
-                            android:id="@+id/tvisitanggal"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:fontFamily="@font/nunitosemibold"
-                            android:gravity="center"
-                            android:textSize="16dp" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="#FFFFFF"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:orientation="vertical"
-                        android:weightSum="5">
-                        <TextView
-                            android:id="@+id/tvjuduljam"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_above="@id/tvisijam"
-                            android:fontFamily="@font/sourcesansprobolditalic"
-                            android:gravity="center"
-                            android:text="Jam"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
-                            android:textColor="#362240"/>
-
-                        <TextView
-                            android:id="@+id/tvisijam"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:fontFamily="@font/nunitosemibold"
-                            android:gravity="center"
-                            android:textSize="16dp" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="#FFFFFF"/>
+                            android:background="#7F7E7F"
+                            android:layout_marginTop="1dp"/>
                     </LinearLayout>
                 </LinearLayout>
             </ScrollView>
         </LinearLayout>
+
     </android.support.v7.widget.CardView>
 </LinearLayout>

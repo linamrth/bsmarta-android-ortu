@@ -2,12 +2,14 @@ package com.example.lina.userorangtua.Fitur.Kuisioner;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.lina.userorangtua.Model.Kuisioner.KuisionerStatusModel;
 import com.example.lina.userorangtua.R;
@@ -31,7 +33,7 @@ public class KuisionerStatusAdapter extends RecyclerView.Adapter<KuisionerStatus
     }
 
     @Override
-    public void onBindViewHolder(KuisionerStatusAdapter.ItemRowHolder holder, int i) {
+    public void onBindViewHolder(KuisionerStatusAdapter.ItemRowHolder holder, final int i) {
         final KuisionerStatusModel kuisionerStatusModel = dataKuisioner.get(i);
 
         holder.tvTanggal.setText(dataKuisioner.get(i).getTanggal());
@@ -39,8 +41,10 @@ public class KuisionerStatusAdapter extends RecyclerView.Adapter<KuisionerStatus
         String status;
         if(dataKuisioner.get(i).getStatuskuisioner().equals("S")){
             status = "Sudah Terisi";
+            holder.logo.setBackgroundResource(R.drawable.ic_check_circle_black_24dp);
         } else {
             status = "Belum Terisi";
+            holder.logo.setBackgroundResource(R.drawable.ic_highlight_off_black_24dp);
         }
         holder.tvStatus.setText(status);
         holder.cvStatuskuisioner.setOnClickListener(new View.OnClickListener() {
@@ -52,9 +56,13 @@ public class KuisionerStatusAdapter extends RecyclerView.Adapter<KuisionerStatus
                     activity.startActivity(intent);
                 }
                 else {
-                    Intent intent = new Intent(activity, KuisionerIsi.class);
-                    intent.putExtra("idkuisioner", kuisionerStatusModel.getIdkuisioner());
-                    activity.startActivity(intent);
+                    if(DateParser.now().after(DateParser.parseToDate(dataKuisioner.get(i).getTanggal()))){
+                        Intent intent = new Intent(activity, KuisionerIsi.class);
+                        intent.putExtra("idkuisioner", kuisionerStatusModel.getIdkuisioner());
+                        activity.startActivity(intent);
+                    } else {
+                        Toast.makeText(activity, "Belum Saatnya Mengisi Kuisioner", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
@@ -67,14 +75,16 @@ public class KuisionerStatusAdapter extends RecyclerView.Adapter<KuisionerStatus
 
     public class ItemRowHolder extends RecyclerView.ViewHolder {
         protected TextView tvTanggal, tvNamaguru, tvStatus;
-        protected CardView cvStatuskuisioner;
+        protected ImageView logo;
+        protected LinearLayout cvStatuskuisioner;
         public ItemRowHolder(View view) {
             super(view);
 
             this.tvTanggal = (TextView) view.findViewById(R.id.tvtanggal);
             this.tvNamaguru = (TextView) view.findViewById(R.id.tvnamaguru);
             this.tvStatus = (TextView) view.findViewById(R.id.tvstatuskuisioner);
-            this.cvStatuskuisioner = (CardView) view.findViewById(R.id.cvstatuskuisioner);
+            this.logo = (ImageView) view.findViewById(R.id.logostatus);
+            this.cvStatuskuisioner = (LinearLayout) view.findViewById(R.id.cvstatuskuisioner);
         }
     }
 }

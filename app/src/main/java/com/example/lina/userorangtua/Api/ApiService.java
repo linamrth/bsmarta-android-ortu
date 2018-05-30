@@ -28,7 +28,7 @@ import retrofit2.http.POST;
 import retrofit2.http.Path;
 
 public class ApiService {
-    public static String BASE_URL = "http://192.168.43.198/bsmarta/admin/api/";
+    public static String BASE_URL = "http://lina.jagopesan.com/admin/api/";
 
     public static PostServices services_post = new Retrofit.Builder()
             .baseUrl(BASE_URL)

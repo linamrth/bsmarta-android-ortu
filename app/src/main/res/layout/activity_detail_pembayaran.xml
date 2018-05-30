@@ -13,14 +13,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardElevation="3dp"
-        app:cardCornerRadius="10dp"
-        app:cardBackgroundColor="@color/colorPrimary">
+        app:cardCornerRadius="10dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:background="@color/colorPrimaryDark"
             android:layout_height="match_parent"
             android:weightSum="5">
             <LinearLayout
@@ -31,7 +29,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="30dp"
+                    android:textSize="25dp"
                     android:textColor="#362240"
                     android:fontFamily="@font/cookie"
                     android:text="Informasi Siswa"
@@ -39,7 +37,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="#FFFFFF"
+                    android:background="@color/colorPrimaryDark"
                     android:layout_marginTop="5dp"/>
             </LinearLayout>
 
@@ -48,39 +46,131 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_gravity="left"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp">
-                <TextView
+                android:layout_marginLeft="10dp">
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/tvnama"
-                    android:textSize="18dp"
-                    android:fontFamily="@font/nunitosemibold"
-                    android:textColor="@color/white" />
-                <TextView
+                    android:layout_marginBottom="3dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:textColor="#362240"
+                        android:text="Nama Siswa"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:textColor="#362240"
+                        android:layout_marginLeft="5dp"
+                        android:text=" : "/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvnama"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:textColor="#362240" />
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/tvkelas"
-                    android:layout_below="@+id/tvnama"
-                    android:textSize="14dp"
-                    android:fontFamily="@font/nunitosemibold"
-                    android:textColor="#362240" />
-                <TextView
+                    android:layout_marginBottom="3dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:textColor="#362240"
+                        android:text="Kelas"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:textColor="#362240"
+                        android:layout_marginLeft="50dp"
+                        android:text=" : "/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvkelas"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:textColor="#362240" />
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/tvprogram"
-                    android:layout_below="@+id/tvkelas"
-                    android:textSize="14dp"
-                    android:textColor="#362240"
-                    android:fontFamily="@font/nunitosemibold" />
-                <TextView
+                    android:layout_marginBottom="3dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:textColor="#362240"
+                        android:text="Program"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:textColor="#362240"
+                        android:layout_marginLeft="29dp"
+                        android:text=" : "/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvprogram"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:textColor="#362240"
+                        android:fontFamily="@font/nunitosemibold" />
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/tvlevel"
-                    android:layout_below="@+id/tvprogram"
-                    android:textSize="14dp"
-                    android:textColor="#362240"
-                    android:fontFamily="@font/nunitosemibold" />
+                    android:layout_marginBottom="3dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:textColor="#362240"
+                        android:text="Level"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:textColor="#362240"
+                        android:layout_marginLeft="51dp"
+                        android:text=" : "/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvlevel"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:textColor="#362240"
+                        android:fontFamily="@font/nunitosemibold" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </android.support.v7.widget.CardView>
@@ -90,16 +180,13 @@
         android:layout_height="wrap_content"
         app:cardElevation="3dp"
         app:cardCornerRadius="10dp"
-        app:cardBackgroundColor="@color/colorPrimary"
         android:layout_marginTop="10dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:background="@color/colorPrimaryDark"
-            android:layout_height="match_parent"
-            android:weightSum="5">
+            android:layout_height="match_parent">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -108,25 +195,32 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="30dp"
+                    android:textSize="25dp"
                     android:textColor="#362240"
                     android:fontFamily="@font/cookie"
-                    android:text="Informasi Pembayaran"
+                    android:text="Informasi Jadwal"
                     android:layout_gravity="center"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="#FFFFFF"
+                    android:background="@color/colorPrimaryDark"
                     android:layout_marginTop="5dp"/>
             </LinearLayout>
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/rv"
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp">
-
-            </android.support.v7.widget.RecyclerView>
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv"
+                        android:padding="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+            </ScrollView>
         </LinearLayout>
 
     </android.support.v7.widget.CardView>

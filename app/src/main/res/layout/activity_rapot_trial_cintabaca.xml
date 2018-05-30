@@ -13,26 +13,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardElevation="3dp"
-        app:cardCornerRadius="10dp"
-        app:cardBackgroundColor="@color/colorPrimary">
+        app:cardCornerRadius="10dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:background="@color/colorPrimaryDark"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:weightSum="5">
+            android:layout_height="wrap_content">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="10dp">
+                android:padding="5dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="30dp"
+                    android:textSize="25dp"
                     android:textColor="#362240"
                     android:fontFamily="@font/cookie"
                     android:text="Informasi Siswa"
@@ -40,7 +36,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="#FFFFFF"
+                    android:background="@color/colorPrimaryDark"
                     android:layout_marginTop="5dp"/>
             </LinearLayout>
 
@@ -50,41 +46,130 @@
                 android:orientation="vertical"
                 android:layout_gravity="left"
                 android:layout_marginLeft="10dp">
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/tvnama"
-                    android:gravity="center"
-                    android:textSize="16dp"
-                    android:fontFamily="@font/nunitosemibold"
-                    android:textColor="@color/white" />
-                <TextView
+                    android:layout_marginBottom="3dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:textColor="#362240"
+                        android:text="Nama Siswa"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:textColor="#362240"
+                        android:layout_marginLeft="5dp"
+                        android:text=" : "/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvnama"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:textColor="#362240" />
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/tvkelas"
-                    android:layout_below="@+id/tvnama"
-                    android:gravity="center"
-                    android:textSize="14dp"
-                    android:fontFamily="@font/nunitosemibold"
-                    android:textColor="#362240" />
-                <TextView
+                    android:layout_marginBottom="3dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:textColor="#362240"
+                        android:text="Kelas"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:textColor="#362240"
+                        android:layout_marginLeft="50dp"
+                        android:text=" : "/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvkelas"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:textColor="#362240" />
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/tvprogram"
-                    android:layout_below="@+id/tvkelas"
-                    android:gravity="center"
-                    android:textSize="14dp"
-                    android:textColor="#362240"
-                    android:fontFamily="@font/nunitosemibold" />
-                <TextView
+                    android:layout_marginBottom="3dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:textColor="#362240"
+                        android:text="Program"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:textColor="#362240"
+                        android:layout_marginLeft="29dp"
+                        android:text=" : "/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvprogram"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:textColor="#362240"
+                        android:fontFamily="@font/nunitosemibold" />
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/tvnamaguru"
-                    android:layout_below="@+id/tvprogram"
-                    android:gravity="center"
-                    android:textSize="14dp"
-                    android:textColor="#362240"
-                    android:fontFamily="@font/nunitosemibold" />
+                    android:layout_marginBottom="3dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:textColor="#362240"
+                        android:text="Nama Guru"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:textColor="#362240"
+                        android:layout_marginLeft="12dp"
+                        android:text=" : "/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvnamaguru"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:textColor="#362240"
+                        android:fontFamily="@font/nunitosemibold" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </android.support.v7.widget.CardView>
@@ -94,25 +179,22 @@
         android:layout_height="wrap_content"
         app:cardElevation="3dp"
         app:cardCornerRadius="10dp"
-        app:cardBackgroundColor="@color/colorPrimary"
         android:layout_marginTop="10dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:background="@color/colorPrimaryDark"
-            android:layout_height="match_parent"
-            android:weightSum="5">
+            android:layout_height="match_parent">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="10dp">
+                android:padding="5dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="30dp"
+                    android:textSize="25dp"
                     android:textColor="#362240"
                     android:fontFamily="@font/cookie"
                     android:text="Informasi Rapot Trial"
@@ -120,7 +202,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="#FFFFFF"
+                    android:background="@color/colorPrimaryDark"
                     android:layout_marginTop="5dp"/>
             </LinearLayout>
             <ScrollView
@@ -141,10 +223,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_above="@id/tvsoal1"
-                            android:fontFamily="@font/sourcesansprobolditalic"
+                            android:fontFamily="@font/nunitosemibold"
                             android:gravity="center"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
+                            android:textSize="14dp"
                             android:textColor="#362240"
                             android:text="Pernah mengikuti program baca dan tulis"/>
                         <TextView
@@ -154,12 +235,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/nunitosemibold"
-                            android:gravity="center"
-                            android:textSize="16dp" />
+                            android:textSize="13dp" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="#FFFFFF"
+                            android:background="#7F7E7F"
                             android:layout_marginTop="1dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -173,10 +253,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_above="@id/tvsoal2"
-                            android:fontFamily="@font/sourcesansprobolditalic"
+                            android:fontFamily="@font/nunitosemibold"
                             android:gravity="center"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
+                            android:textSize="14dp"
                             android:textColor="#362240"
                             android:text="Pengenalan Huruf Vokal"/>
                         <TextView
@@ -186,12 +265,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/nunitosemibold"
-                            android:gravity="center"
-                            android:textSize="16dp" />
+                            android:textSize="13dp" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="#FFFFFF"
+                            android:background="#7F7E7F"
                             android:layout_marginTop="1dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -205,10 +283,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_above="@id/tvsoal3"
-                            android:fontFamily="@font/sourcesansprobolditalic"
+                            android:fontFamily="@font/nunitosemibold"
                             android:gravity="center"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
+                            android:textSize="14dp"
                             android:textColor="#362240"
                             android:text="Pengenalan Huruf Konsonan"/>
                         <TextView
@@ -218,12 +295,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/nunitosemibold"
-                            android:gravity="center"
-                            android:textSize="16dp" />
+                            android:textSize="13dp" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="#FFFFFF"
+                            android:background="#7F7E7F"
                             android:layout_marginTop="1dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -237,10 +313,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_above="@id/tvsoal4"
-                            android:fontFamily="@font/sourcesansprobolditalic"
+                            android:fontFamily="@font/nunitosemibold"
                             android:gravity="center"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
+                            android:textSize="14dp"
                             android:textColor="#362240"
                             android:text="Membaca Suku Kata Terbuka"/>
                         <TextView
@@ -250,12 +325,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/nunitosemibold"
-                            android:gravity="center"
-                            android:textSize="16dp" />
+                            android:textSize="13dp" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="#FFFFFF"
+                            android:background="#7F7E7F"
                             android:layout_marginTop="1dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -269,10 +343,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_above="@id/tvsoal5"
-                            android:fontFamily="@font/sourcesansprobolditalic"
+                            android:fontFamily="@font/nunitosemibold"
                             android:gravity="center"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
+                            android:textSize="14dp"
                             android:textColor="#362240"
                             android:text="Membaca Suku Kata Tertutup"/>
                         <TextView
@@ -282,12 +355,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/nunitosemibold"
-                            android:gravity="center"
-                            android:textSize="16dp" />
+                            android:textSize="13dp" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="#FFFFFF"
+                            android:background="#7F7E7F"
                             android:layout_marginTop="1dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -301,10 +373,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_above="@id/tvsoal6"
-                            android:fontFamily="@font/sourcesansprobolditalic"
+                            android:fontFamily="@font/nunitosemibold"
                             android:gravity="center"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
+                            android:textSize="14dp"
                             android:textColor="#362240"
                             android:text="Menulis Suku Kata Terbuka"/>
                         <TextView
@@ -314,12 +385,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/nunitosemibold"
-                            android:gravity="center"
-                            android:textSize="16dp" />
+                            android:textSize="13dp" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="#FFFFFF"
+                            android:background="#7F7E7F"
                             android:layout_marginTop="1dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -333,10 +403,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_above="@id/tvsoal7"
-                            android:fontFamily="@font/sourcesansprobolditalic"
+                            android:fontFamily="@font/nunitosemibold"
                             android:gravity="center"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
+                            android:textSize="14dp"
                             android:textColor="#362240"
                             android:text="Menulis Suku Kata Terbuka"/>
                         <TextView
@@ -346,12 +415,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/nunitosemibold"
-                            android:gravity="center"
-                            android:textSize="16dp" />
+                            android:textSize="13dp" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="#FFFFFF"
+                            android:background="#7F7E7F"
                             android:layout_marginTop="1dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -365,10 +433,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_above="@id/tvsoal8"
-                            android:fontFamily="@font/sourcesansprobolditalic"
+                            android:fontFamily="@font/nunitosemibold"
                             android:gravity="center"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
+                            android:textSize="14dp"
                             android:textColor="#362240"
                             android:text="Kemandirian"/>
                         <TextView
@@ -378,12 +445,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/nunitosemibold"
-                            android:gravity="center"
-                            android:textSize="16dp" />
+                            android:textSize="13dp" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="#FFFFFF"
+                            android:background="#7F7E7F"
                             android:layout_marginTop="1dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -397,10 +463,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_above="@id/tvsoal9"
-                            android:fontFamily="@font/sourcesansprobolditalic"
+                            android:fontFamily="@font/nunitosemibold"
                             android:gravity="center"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
+                            android:textSize="14dp"
                             android:textColor="#362240"
                             android:text="Kemampuan Komunikasi"/>
                         <TextView
@@ -410,12 +475,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/nunitosemibold"
-                            android:gravity="center"
-                            android:textSize="16dp" />
+                            android:textSize="13dp" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="#FFFFFF"
+                            android:background="#7F7E7F"
                             android:layout_marginTop="1dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -429,10 +493,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_above="@id/tvsoal10"
-                            android:fontFamily="@font/sourcesansprobolditalic"
+                            android:fontFamily="@font/nunitosemibold"
                             android:gravity="center"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
+                            android:textSize="14dp"
                             android:textColor="#362240"
                             android:text="Berkebutuhan Khusus"/>
                         <TextView
@@ -442,12 +505,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/nunitosemibold"
-                            android:gravity="center"
-                            android:textSize="16dp" />
+                            android:textSize="13dp" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="#FFFFFF"
+                            android:background="#7F7E7F"
                             android:layout_marginTop="1dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -461,10 +523,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_above="@id/tvsoal11"
-                            android:fontFamily="@font/sourcesansprobolditalic"
+                            android:fontFamily="@font/nunitosemibold"
                             android:gravity="center"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
+                            android:textSize="14dp"
                             android:textColor="#362240"
                             android:text="Bergaransi"/>
                         <TextView
@@ -474,12 +535,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/nunitosemibold"
-                            android:gravity="center"
-                            android:textSize="16dp" />
+                            android:textSize="13dp" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="#FFFFFF"
+                            android:background="#7F7E7F"
                             android:layout_marginTop="1dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -493,10 +553,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_above="@id/tvcatatan"
-                            android:fontFamily="@font/sourcesansprobolditalic"
+                            android:fontFamily="@font/nunitosemibold"
                             android:gravity="center"
-                            android:textSize="16dp"
-                            android:textStyle="italic|bold"
+                            android:textSize="14dp"
                             android:textColor="#362240"
                             android:text="Catatan"/>
                         <TextView
@@ -506,12 +565,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/nunitosemibold"
-                            android:gravity="center"
-                            android:textSize="16dp" />
+                            android:textSize="13dp" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="#FFFFFF"
+                            android:background="#7F7E7F"
                             android:layout_marginTop="1dp"/>
                     </LinearLayout>
                 </LinearLayout>
