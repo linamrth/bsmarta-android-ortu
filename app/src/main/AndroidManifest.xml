@@ -58,10 +58,10 @@
             android:theme="@style/AppTheme2" />
         <activity
             android:name=".Fitur.Kuisioner.KuisionerStatus"
-            android:theme="@style/AppTheme2"/>
+            android:theme="@style/AppTheme2" />
         <activity
             android:name=".Fitur.Kuisioner.KuisionerLihat"
-            android:theme="@style/AppTheme2"/>
+            android:theme="@style/AppTheme2" />
         <activity
             android:name=".Fitur.Kuisioner.KuisionerIsi"
             android:theme="@style/AppTheme2" />

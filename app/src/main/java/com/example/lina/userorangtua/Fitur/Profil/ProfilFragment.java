@@ -6,6 +6,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,7 +19,10 @@ import com.example.lina.userorangtua.Api.ApiService;
 import com.example.lina.userorangtua.Fitur.Login.LoginForm;
 import com.example.lina.userorangtua.Fitur.Login.Session;
 import com.example.lina.userorangtua.Model.Profil.ProfileResultModel;
+import com.example.lina.userorangtua.Model.Profil.ProfileSiswaModel;
 import com.example.lina.userorangtua.R;
+
+import java.util.ArrayList;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -25,7 +30,9 @@ import retrofit2.Response;
 
 public class ProfilFragment extends Fragment {
     private ProfileResultModel profileResultModel;
+    private ProfilFragmentAdapter profilFragmentAdapter;
     private TextView tvNamaortu,tvGender, tvTelepon;
+    private RecyclerView rv;
     private Button btnlogout;
     Session session;
 
@@ -36,6 +43,7 @@ public class ProfilFragment extends Fragment {
 
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("bsmart", Context.MODE_PRIVATE);
         Log.d("idorangtua", String.valueOf(sharedPreferences.getInt("idorangtua",0)));
+        rv = (RecyclerView) view.findViewById(R.id.rv);
 
         tvNamaortu = view.findViewById(R.id.tv_namaortu);
         tvGender = view.findViewById(R.id.tvgender);
@@ -58,6 +66,12 @@ public class ProfilFragment extends Fragment {
             @Override
             public void onResponse(Call<ProfileResultModel> call, Response<ProfileResultModel> response) {
                 profileResultModel = response.body();
+                //ProfileResultModel resultModel = response.body();
+
+                profilFragmentAdapter = new ProfilFragmentAdapter(getActivity(), (ArrayList<ProfileSiswaModel>) profileResultModel.getResults().getSiswa());
+                rv.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
+                rv.setAdapter(profilFragmentAdapter);
+                rv.getAdapter().notifyDataSetChanged();
 
                 tvNamaortu.setText(profileResultModel.getResults().getNamaortu());
                 String gender;
