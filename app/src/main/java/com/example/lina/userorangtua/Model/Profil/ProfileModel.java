@@ -3,6 +3,7 @@ package com.example.lina.userorangtua.Model.Profil;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProfileModel {
@@ -19,7 +20,7 @@ public class ProfileModel {
     private String telepon;
     @SerializedName("siswa")
     @Expose
-    private List<ProfileSiswaModel> siswa = null;
+    private ArrayList<ProfileSiswaModel> siswa = null;
 
     public String getNamaortu() {
         return namaortu;
@@ -49,7 +50,7 @@ public class ProfileModel {
         return siswa;
     }
 
-    public void setSiswa(List<ProfileSiswaModel> siswa) {
+    public void setSiswa(ArrayList<ProfileSiswaModel> siswa) {
         this.siswa = siswa;
     }
 

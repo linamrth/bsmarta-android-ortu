@@ -5,7 +5,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.TextView;
 
@@ -21,6 +24,7 @@ import retrofit2.Response;
 
 public class RapotKursusStatus extends AppCompatActivity {
     private ArrayList<RapotKursusStatusResultModel> dataRapotkursus;
+    private Toolbar toolbar;
     private RecyclerView rv;
     private RapotKursusStatusAdapter rapotKursusStatusAdapter;
     private TextView tvHari, tvTanggal, tvNamaguru, tvStatus;
@@ -30,6 +34,9 @@ public class RapotKursusStatus extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rapot_kursus_status);
         setTitle("Daftar Rapot");
+
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         Intent intent = getIntent();
         Integer idsiswabelajar = intent.getIntExtra("idsiswabelajar", 0);
@@ -63,7 +70,21 @@ public class RapotKursusStatus extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu2, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
     public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.grafik:
+                Intent intent = new Intent(this, GrafikPerkembangan.class);
+                startActivity(intent);
+                return true;
+        }
+
         int id = item.getItemId();
 
         if (id == android.R.id.home){

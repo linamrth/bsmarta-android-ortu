@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.example.lina.userorangtua.Api.ApiService;
@@ -19,7 +20,8 @@ public class RapotKursus extends AppCompatActivity {
     private RapotKursusModel rapotKursusModel;
     private TextView tvNama, tvKelas, tvProgram, tvLevel;
     private TextView tvNamaguru, tvTanggal, tvPertemuanke;
-    private TextView tvMateri, tvHalamanketercapaian, tvHasil, tvCatatanguru, tvRewardhasil, tvRewardsikap;
+    private TextView tvMateri, tvHalamanketercapaian, tvHasil, tvCatatanguru;
+    private RatingBar tvRewardhasil, tvRewardsikap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +44,8 @@ public class RapotKursus extends AppCompatActivity {
         tvHalamanketercapaian = (TextView) findViewById(R.id.tvhalamanketercapaian);
         tvHasil = (TextView) findViewById(R.id.tvhasil);
         tvCatatanguru = (TextView) findViewById(R.id.tvcatatanguru);
-        tvRewardhasil = (TextView) findViewById(R.id.tvrewardhasil);
-        tvRewardsikap = (TextView) findViewById(R.id.tvrewardsikap);
+        tvRewardhasil = (RatingBar) findViewById(R.id.tvrewardhasil);
+        tvRewardsikap = (RatingBar) findViewById(R.id.tvrewardsikap);
 
         ApiService.services_get.getRapotKursus(idgenerate).enqueue(new Callback<RapotKursusModel>() {
             @Override
@@ -61,8 +63,8 @@ public class RapotKursus extends AppCompatActivity {
                 tvHalamanketercapaian.setText("Halaman " + rapotKursusModel.getHalamanketercapaian());
                 tvHasil.setText(rapotKursusModel.getHasil());
                 tvCatatanguru.setText(rapotKursusModel.getCatatanguru());
-                tvRewardhasil.setText("Bintang " + rapotKursusModel.getRewardhasil());
-                tvRewardsikap.setText("Bintang " + rapotKursusModel.getRewardsikap());
+                tvRewardhasil.setRating(rapotKursusModel.getRewardhasil());
+                tvRewardsikap.setRating(rapotKursusModel.getRewardsikap());
             }
 
             @Override

@@ -6,4 +6,8 @@
     <string name="title_pembayaran">Pembayaran</string>
     <string name="title_kuisioner">Kuisioner</string>
     <string name="title_profil">Profil</string>
+    <string name="aboutus">About Us</string>
+    <string name="logout">Log Out</string>
+    <string name="editpassword">Edit Password</string>
+    <string name="grafik">Grafik Perkembangan</string>
 </resources>
