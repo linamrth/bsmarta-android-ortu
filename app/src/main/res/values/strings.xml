@@ -10,4 +10,8 @@
     <string name="logout">Log Out</string>
     <string name="editpassword">Edit Password</string>
     <string name="grafik">Grafik Perkembangan</string>
+
+    <string name="stacked_one_1">STATE 1</string>
+    <string name="stacked_one_2">STATE 2</string>
+    <string name="stacked_one_3">STATE 3</string>
 </resources>

@@ -29,6 +29,8 @@ public class RapotKursusStatus extends AppCompatActivity {
     private RapotKursusStatusAdapter rapotKursusStatusAdapter;
     private TextView tvHari, tvTanggal, tvNamaguru, tvStatus;
 
+    private Integer idsiswabelajar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,8 +41,8 @@ public class RapotKursusStatus extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         Intent intent = getIntent();
-        Integer idsiswabelajar = intent.getIntExtra("idsiswabelajar", 0);
-        Log.d("terserah", String.valueOf(idsiswabelajar));
+        idsiswabelajar = intent.getIntExtra("idsiswabelajar", 0);
+        Log.d("idsiswabelajar", String.valueOf(idsiswabelajar));
 
         tvHari = (TextView) findViewById(R.id.tvhari);
         tvTanggal = (TextView) findViewById(R.id.tvtanggal);
@@ -81,6 +83,7 @@ public class RapotKursusStatus extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.grafik:
                 Intent intent = new Intent(this, GrafikPerkembangan.class);
+                intent.putExtra("idsiswabelajar", idsiswabelajar);
                 startActivity(intent);
                 return true;
         }

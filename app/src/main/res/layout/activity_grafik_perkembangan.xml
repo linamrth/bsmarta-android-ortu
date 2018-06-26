@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fitur.Rapot.GrafikPerkembangan">
+    xmlns:williamchart="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fitur.Rapot.GrafikPerkembangan"
+    williamchart:cardBackgroundColor="#343f57">
 
-</android.support.constraint.ConstraintLayout>
+    <com.db.chart.view.LineChartView
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        williamchart:chart_axis="false"
+        williamchart:chart_axisBorderSpacing="15dp"
+        williamchart:chart_labelColor="#6a84c3" />
+
+</RelativeLayout>
