@@ -59,6 +59,16 @@ public class JadwalKursus extends AppCompatActivity {
                 rv.setLayoutManager(new LinearLayoutManager(JadwalKursus.this));
                 rv.setAdapter(jadwalKursusAdapter);
                 rv.getAdapter().notifyDataSetChanged();
+
+//                NotificationScheduler.cancelReminder(JadwalKursus.this);
+//                for (JadwalKursusGenerateModel model : resultModel.getJadwalgenerate()) {
+////                    NotificationScheduler.setReminder(JadwalKursus.this, AlarmReceiver.class, 17, 15, getDateDay(model.getTanggal()), getDateMonth(model.getTanggal()));
+//                    NotificationScheduler.setReminder(JadwalKursus.this, AlarmReceiver.class, 18, 18, 6, 7);
+//                    Context context = null;
+//                    NotificationScheduler.showNotification(context, JadwalKursus.class,
+//                            "Kamu punya tugas", "Kerjakan tugas sekarang?");
+//                }
+
             }
 
             @Override
@@ -80,4 +90,28 @@ public class JadwalKursus extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+//    public int getDateDay(String s) {
+//        SimpleDateFormat myFormat = new SimpleDateFormat("yyyy-mm-dd");
+//        try {
+//            Date date = myFormat.parse(s);
+//            return date.getDay();
+//        } catch (ParseException e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//            return 1;
+//        }
+//    }
+//
+//    public int getDateMonth(String s) {
+//        SimpleDateFormat myFormat = new SimpleDateFormat("yyyy-mm-dd");
+//        try {
+//            Date date = myFormat.parse(s);
+//            return date.getMonth();
+//        } catch (ParseException e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//            return 1;
+//        }
+//    }
 }

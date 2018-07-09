@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "902700721891",
+    "firebase_url": "https://b-smart-orangtua.firebaseio.com",
+    "project_id": "b-smart-orangtua",
+    "storage_bucket": "b-smart-orangtua.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:902700721891:android:c898aa1c32443795",
+        "android_client_info": {
+          "package_name": "com.example.lina.userorangtua"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "902700721891-7kjj27g3amavtiisubm9psdbjk216so0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfUCOXvNrB7m7rjzk-VwSA-PLTzBt_Xn0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

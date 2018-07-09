@@ -2,8 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.lina.userorangtua">
 
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -54,6 +61,12 @@
             android:name=".Fitur.Rapot.RapotKursus"
             android:theme="@style/AppTheme2" />
         <activity
+            android:name=".Fitur.Rapot.GrafikPerkembangan"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".Fitur.Rapot.Grafik"
+            android:theme="@style/AppTheme2"/>
+        <activity
             android:name=".Fitur.Pembayaran.DetailPembayaran"
             android:theme="@style/AppTheme2" />
         <activity
@@ -74,9 +87,29 @@
         <activity
             android:name=".Fitur.Menu.Logout"
             android:theme="@style/AppTheme2" />
-        <activity
-            android:name=".Fitur.Rapot.GrafikPerkembangan"
-            android:theme="@style/AppTheme2" />
+        <activity android:name=".Fitur.Notifikasi.Notifikasi" />
+
+        <service android:name=".Fitur.Notifikasi.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".Fitur.Notifikasi.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".Fitur.Notifikasi.AlarmReceiver"
+            android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+
     </application>
 
 </manifest>

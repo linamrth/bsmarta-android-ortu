@@ -82,7 +82,7 @@ public class RapotKursusStatus extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()){
             case R.id.grafik:
-                Intent intent = new Intent(this, GrafikPerkembangan.class);
+                Intent intent = new Intent(this, Grafik.class);
                 intent.putExtra("idsiswabelajar", idsiswabelajar);
                 startActivity(intent);
                 return true;
