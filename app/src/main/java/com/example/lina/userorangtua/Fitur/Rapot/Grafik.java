@@ -8,17 +8,21 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.lina.userorangtua.Api.ApiService;
 import com.example.lina.userorangtua.Model.Rapot.GrafikPerkembanganModel;
 import com.example.lina.userorangtua.R;
 
 import java.util.ArrayList;
 
 import im.dacer.androidcharts.LineView;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class Grafik extends AppCompatActivity {
     private GrafikPerkembanganModel grafikPerkembanganModel;
     private LineView lineView;
-    int randomint = 9;
+//    private RelativeLayout empty;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,46 +35,58 @@ public class Grafik extends AppCompatActivity {
         Toast.makeText(this, "ID Siswa : " + idsiswabelajar, Toast.LENGTH_SHORT).show();
 
         lineView = (LineView) findViewById(R.id.line_view);
+//        empty = (RelativeLayout) findViewById(R.id.empty);
 
-        initLineView(lineView);
-//        Button lineButton = (Button) findViewById(R.id.line_button);
-//        lineButton.setOnClickListener(new View.OnClickListener() {
-//            @Override public void onClick(View view) {
-//                randomSet(lineView);
-//            }
-//        });
-//
-        randomSet(lineView);
+        ApiService.services_get.getGrafikPerkembangan(idsiswabelajar).enqueue(new Callback<GrafikPerkembanganModel>() {
+            @Override
+            public void onResponse(Call<GrafikPerkembanganModel> call, Response<GrafikPerkembanganModel> response) {
+                grafikPerkembanganModel = response.body();
+                //Toast.makeText(Grafik.this,  "Code : " + response.code(), Toast.LENGTH_SHORT).show();
+
+                //Untuk Pertemuan
+                Integer pertemuan = grafikPerkembanganModel.getPertemuan().size();
+                ArrayList<String> mLabels = new ArrayList<String>();
+                for (int i = 0; i < pertemuan; i++) {
+                    mLabels.add(grafikPerkembanganModel.getPertemuan().get(i).toString());
+                }
+                lineView.setBottomTextList(mLabels);
+                lineView.setColorArray(new int[] {
+                        Color.parseColor("#F44336"), Color.parseColor("#9C27B0"),
+                        Color.parseColor("#2196F3"), Color.parseColor("#009688")
+                });
+                lineView.setDrawDotLine(true);
+                lineView.setShowPopup(LineView.SHOW_POPUPS_NONE);
+
+                //Untuk Data Grafik
+                Integer hasiltarget = grafikPerkembanganModel.getHasiltarget().size();
+                ArrayList<Integer> dataList = new ArrayList<>();
+                for (int i = 0; i < hasiltarget; i++){
+                    int hasil = Integer.parseInt(grafikPerkembanganModel.getHasiltarget().get(i));
+                    dataList.add(hasil);
+                }
+                ArrayList<ArrayList<Integer>> dataLists = new ArrayList<>();
+                dataLists.add(dataList);
+                lineView.setDataList(dataLists);
+
+//                if (pertemuan == 0) {
+//                    empty.setVisibility(View.VISIBLE);
+//                }
+//                else if (hasiltarget == 0) {
+//                    empty.setVisibility(View.VISIBLE);
+//                }
+//                else {
+//                    empty.setVisibility(View.GONE);
+//                }
+            }
+
+            @Override
+            public void onFailure(Call<GrafikPerkembanganModel> call, Throwable t) {
+
+            }
+        });
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-    }
-
-    private void initLineView(LineView lineView) {
-        ArrayList<String> test = new ArrayList<String>();
-        for (int i = 0; i < randomint; i++) {
-            test.add(String.valueOf(i + 1));
-        }
-        lineView.setBottomTextList(test);
-        lineView.setColorArray(new int[] {
-                Color.parseColor("#F44336"), Color.parseColor("#9C27B0"),
-                Color.parseColor("#2196F3"), Color.parseColor("#009688")
-        });
-        lineView.setDrawDotLine(true);
-        lineView.setShowPopup(LineView.SHOW_POPUPS_NONE);
-    }
-
-    private void randomSet(LineView lineView) {
-        ArrayList<Integer> dataList = new ArrayList<>();
-        float random = (float) (Math.random() * 9 + 1);
-        for (int i = 0; i < randomint; i++) {
-            dataList.add((int) (Math.random() * random));
-        }
-
-        ArrayList<ArrayList<Integer>> dataLists = new ArrayList<>();
-        dataLists.add(dataList);
-
-        lineView.setDataList(dataLists);
     }
 
     public boolean onOptionsItemSelected(MenuItem item){

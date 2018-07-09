@@ -5,18 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:williamchart="http://schemas.android.com/apk/res-auto"
-    tools:context=".Fitur.Rapot.GrafikPerkembangan"
-    williamchart:cardBackgroundColor="#343f57">
+    tools:context=".Fitur.Rapot.GrafikPerkembangan">
 
-    <com.db.chart.view.LineChartView
-        android:id="@+id/chart"
-        android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:layout_marginBottom="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        williamchart:chart_axis="false"
-        williamchart:chart_axisBorderSpacing="15dp"
-        williamchart:chart_labelColor="#6a84c3" />
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="82dp">
+
+        <!--<view-->
+            <!--android:id="@+id/line_view"-->
+            <!--class="im.dacer.androidcharts.LineView"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="200dp" />-->
+
+        <view
+            android:id="@+id/chart"
+            android:layout_width="wrap_content"
+            android:layout_height="350dp"
+            class="com.db.chart.view.LineChartView"
+            williamchart:chart_axis="false"
+            williamchart:chart_axisBorderSpacing="15dp"
+             />
+    </HorizontalScrollView>
 
 </RelativeLayout>

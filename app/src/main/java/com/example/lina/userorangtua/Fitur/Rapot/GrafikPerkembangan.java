@@ -116,7 +116,7 @@ public class GrafikPerkembangan extends AppCompatActivity {
                     public void run() {
 
                         mBaseAction.run();
-                        mChart.showTooltip(mTip, true);
+//                        mChart.showTooltip(mTip, true);
                     }
                 };
 

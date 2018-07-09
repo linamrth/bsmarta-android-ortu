@@ -90,6 +90,9 @@ public class ApiService {
         @GET("orturapotsiswa/rapotkursus/{id}")
         Call<RapotKursusModel> getRapotKursus(@Path("id") int id);
 
+        @GET("orturapotsiswa/grafikperkembangan/{id}")
+        Call<GrafikPerkembanganModel> getGrafikPerkembangan(@Path("id") int id);
+
         @GET("ortupembayaran/index/{id}")
         Call<PembayaranResultModel> getPembayaran(@Path("id") int id);
 
@@ -104,8 +107,5 @@ public class ApiService {
 
         @GET("ortukuisioner/lihatkuisioner/{id}")
         Call<KuisionerLihatModel> getKuisionerLihat(@Path("id") int id);
-
-        @GET("gurusiswa/grafikperkembangan/{id}")
-        Call<GrafikPerkembanganModel> getGrafikPerkembangan(@Path("id") int id);
     }
 }
