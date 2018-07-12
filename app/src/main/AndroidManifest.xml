@@ -105,7 +105,8 @@
             android:name=".Fitur.Jadwal.AlarmReceiver"
             android:process=":remote" />
 
-        <activity android:name=".Fitur.Rapot.GraphActivity"></activity>
+        <activity android:name=".Fitur.Rapot.GraphActivity" />
+        <activity android:name=".Model.Rapot.GrafikActivity"></activity>
     </application>
 
 </manifest>
