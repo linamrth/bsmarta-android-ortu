@@ -37,22 +37,23 @@ public class JadwalKursusAdapter extends RecyclerView.Adapter<JadwalKursusAdapte
         holder.tvHari.setText(model.getHari());
         holder.tvTanggal.setText(model.getTanggal());
         holder.tvNamaguru.setText(model.getNamaguru());
+        holder.tvJam.setText(new ChangeJam(model.getJam()).getJam());
 
-        if(model.getJam().equals("1")){
-            holder.tvJam.setText("10.00 - 11.00");
-        } else if (model.getJam().equals("2") ){
-            holder.tvJam.setText("11.00 - 12.00");
-        } else if (model.getJam().equals("3")){
-            holder.tvJam.setText("13.00 - 14.00");
-        } else if (model.getJam().equals("4")){
-            holder.tvJam.setText("14.00 - 15.00");
-        } else if (model.getJam().equals("5")){
-            holder.tvJam.setText("15.00 - 16.00");
-        } else if (model.getJam().equals("6")){
-            holder.tvJam.setText("16.00 - 17.00");
-        } else if (model.getJam().equals("7")){
-            holder.tvJam.setText("18.00 - 19.00");
-        }
+//        if(model.getJam().equals("1")){
+//            holder.tvJam.setText("10.00 - 11.00");
+//        } else if (model.getJam().equals("2") ){
+//            holder.tvJam.setText("11.00 - 12.00");
+//        } else if (model.getJam().equals("3")){
+//            holder.tvJam.setText("13.00 - 14.00");
+//        } else if (model.getJam().equals("4")){
+//            holder.tvJam.setText("14.00 - 15.00");
+//        } else if (model.getJam().equals("5")){
+//            holder.tvJam.setText("15.00 - 16.00");
+//        } else if (model.getJam().equals("6")){
+//            holder.tvJam.setText("16.00 - 17.00");
+//        } else if (model.getJam().equals("7")){
+//            holder.tvJam.setText("18.00 - 19.00");
+//        }
     }
 
     @Override

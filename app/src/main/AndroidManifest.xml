@@ -65,7 +65,7 @@
             android:theme="@style/AppTheme2" />
         <activity
             android:name=".Fitur.Rapot.Grafik"
-            android:theme="@style/AppTheme2"/>
+            android:theme="@style/AppTheme2" />
         <activity
             android:name=".Fitur.Pembayaran.DetailPembayaran"
             android:theme="@style/AppTheme2" />
@@ -102,14 +102,10 @@
         </service>
 
         <receiver
-            android:name=".Fitur.Notifikasi.AlarmReceiver"
-            android:enabled="false">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-        </receiver>
+            android:name=".Fitur.Jadwal.AlarmReceiver"
+            android:process=":remote" />
 
-
+        <activity android:name=".Fitur.Rapot.GraphActivity"></activity>
     </application>
 
 </manifest>

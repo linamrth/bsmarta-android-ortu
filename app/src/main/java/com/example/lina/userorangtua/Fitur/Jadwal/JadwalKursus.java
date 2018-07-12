@@ -1,5 +1,8 @@
 package com.example.lina.userorangtua.Fitur.Jadwal;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +17,7 @@ import com.example.lina.userorangtua.Model.Jadwal.JadwalKursusResultModel;
 import com.example.lina.userorangtua.R;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -25,6 +29,7 @@ public class JadwalKursus extends AppCompatActivity {
     private JadwalKursusAdapter jadwalKursusAdapter;
     private TextView tvHari, tvTanggal, tvJam, tvNamaguru;
     private TextView tvNama, tvKelas, tvProgram, tvLevel;
+//    private Calendar calendar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +64,25 @@ public class JadwalKursus extends AppCompatActivity {
                 rv.setLayoutManager(new LinearLayoutManager(JadwalKursus.this));
                 rv.setAdapter(jadwalKursusAdapter);
                 rv.getAdapter().notifyDataSetChanged();
+
+                ArrayList<Calendar> calendars = new ArrayList<Calendar>();
+                ArrayList<String> jamnyas = new ArrayList<String>();
+                Calendar calendar = Calendar.getInstance();
+                for (int i = 0; i < resultModel.getJadwalgenerate().size(); i++) {
+                    String[] tanggal = resultModel.getJadwalgenerate().get(i).getTanggal().split("-");
+                    int tahun = Integer.parseInt(tanggal[0]);
+                    int bulan = Integer.parseInt(tanggal[1]);
+                    int tgll = Integer.parseInt(tanggal[2]);
+                    int jamm = Integer.parseInt(new ChangeJam(resultModel.getJadwalgenerate().get(i).getJam()).getJamNoSpace());
+
+                    Calendar now = Calendar.getInstance();
+                    now.set(tahun, (bulan-1), tgll, (jamm-1), 00, 00);
+                    if(now.compareTo(calendar) > 0){
+                        calendars.add(now);
+                        jamnyas.add(new ChangeJam(resultModel.getJadwalgenerate().get(i).getJam()).getJam());
+                    }
+                }
+                setAlarm(calendars, resultModel.getSiswabelajar().get(0).getNamalengkap(), jamnyas);
 
 //                NotificationScheduler.cancelReminder(JadwalKursus.this);
 //                for (JadwalKursusGenerateModel model : resultModel.getJadwalgenerate()) {
@@ -114,4 +138,14 @@ public class JadwalKursus extends AppCompatActivity {
 //            return 1;
 //        }
 //    }
+    private void setAlarm(ArrayList<Calendar> targetCal, String nama, ArrayList<String> jam){
+        AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
+        for (int i=0; i<targetCal.size(); i++){
+            Intent intent = new Intent(getBaseContext(), AlarmReceiver.class);
+            intent.putExtra("siswa", nama);
+            intent.putExtra("jams", jam.get(i));
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(getBaseContext(), i, intent, 0);
+            alarmManager.set(AlarmManager.RTC_WAKEUP, targetCal.get(i).getTimeInMillis(), pendingIntent);
+        }
+    }
 }
