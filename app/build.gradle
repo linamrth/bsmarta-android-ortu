@@ -34,8 +34,12 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:11.8.0'
     implementation 'com.google.firebase:firebase-messaging:11.8.0'
     implementation "com.android.support:customtabs:27.0.2"
+<<<<<<< HEAD
 
 //    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+=======
+    implementation 'im.dacer:AndroidCharts:1.0.4'
+>>>>>>> 5e8b71bc2e78e099d82d99660a92d27faa14d097
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
