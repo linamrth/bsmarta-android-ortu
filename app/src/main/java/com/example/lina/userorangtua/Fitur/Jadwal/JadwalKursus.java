@@ -76,7 +76,8 @@ public class JadwalKursus extends AppCompatActivity {
                     int jamm = Integer.parseInt(new ChangeJam(resultModel.getJadwalgenerate().get(i).getJam()).getJamNoSpace());
 
                     Calendar now = Calendar.getInstance();
-                    now.set(tahun, (bulan-1), tgll, (jamm-1), 00, 00);
+                    now.set(tahun, (bulan-1), tgll, (jamm-13), 5, 00);
+
                     if(now.compareTo(calendar) > 0){
                         calendars.add(now);
                         jamnyas.add(new ChangeJam(resultModel.getJadwalgenerate().get(i).getJam()).getJam());
