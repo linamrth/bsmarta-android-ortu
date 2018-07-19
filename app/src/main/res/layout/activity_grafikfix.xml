@@ -4,18 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fitur.Rapot.Grafik">
+    tools:context=".Fitur.Rapot.GrafikFix">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/cookie"
+        android:orientation="vertical"
         android:gravity="center"
-        android:text="Grafik Perkembangan Belajar Siswa"
-        android:textSize="25dp" />
+        android:padding="5dp">
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/cookie"
+            android:gravity="center"
+            android:text="Grafik Perkembangan Belajar Siswa"
+            android:textSize="25dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
 
     <RelativeLayout
         android:id="@+id/empty"
@@ -34,6 +45,7 @@
         android:id="@+id/horizontalScrollView"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:padding="5dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="82dp">
 
@@ -41,15 +53,23 @@
             android:id="@+id/line_view"
             class="im.dacer.androidcharts.LineView"
             android:layout_width="wrap_content"
-            android:layout_height="200dp" />
+            android:layout_height="250dp" />
 
     </HorizontalScrollView>
 
     <LinearLayout
-        android:layout_marginTop="298dp"
+        android:layout_marginTop="350dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:fontFamily="@font/nunitosemibold"
+            android:textSize="16dp"
+            android:text="Keterangan : "/>
 
         <LinearLayout
             android:padding="8dp"
@@ -64,6 +84,7 @@
 
             <TextView
                 android:layout_marginLeft="6dp"
+                android:fontFamily="@font/nunitosemibold"
                 android:text="Nilai Hasil Perolehan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -83,20 +104,12 @@
 
             <TextView
                 android:layout_marginLeft="6dp"
+                android:fontFamily="@font/nunitosemibold"
                 android:text="Nilai Target Minimum"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
     </LinearLayout>
-
-    <!--<Button-->
-    <!--android:id="@+id/line_button"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_alignParentBottom="true"-->
-    <!--android:layout_centerHorizontal="true"-->
-    <!--android:layout_marginBottom="148dp"-->
-    <!--android:text="Random" />-->
 
 </RelativeLayout>

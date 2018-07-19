@@ -62,7 +62,7 @@ public class LoginForm extends AppCompatActivity {
 
                     @Override
                     public void onFailure(Call<ModelResultLogin> call, Throwable t) {
-                        Toast.makeText(LoginForm.this, "Akun belum terdaftar !", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginForm.this, "Username atau Password Salah!", Toast.LENGTH_SHORT).show();
 
                     }
                 });

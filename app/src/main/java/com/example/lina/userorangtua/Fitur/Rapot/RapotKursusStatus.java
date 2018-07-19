@@ -13,7 +13,6 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.example.lina.userorangtua.Api.ApiService;
-import com.example.lina.userorangtua.Model.Rapot.GrafikActivity;
 import com.example.lina.userorangtua.Model.Rapot.RapotKursusStatusResultModel;
 import com.example.lina.userorangtua.R;
 
@@ -83,7 +82,7 @@ public class RapotKursusStatus extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()){
             case R.id.grafik:
-                Intent intent = new Intent(this, GrafikActivity.class);
+                Intent intent = new Intent(this, GrafikFix.class);
                 intent.putExtra("idsiswabelajar", idsiswabelajar);
                 startActivity(intent);
                 return true;
