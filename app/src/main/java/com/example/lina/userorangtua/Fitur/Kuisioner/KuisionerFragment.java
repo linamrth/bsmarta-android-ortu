@@ -108,7 +108,7 @@ public class KuisionerFragment extends Fragment {
         return super.onOptionsItemSelected(item);
     }
     private void logout(){
-        session.setLogin(false,0);
+        session.setLogin(false,0, 0);
         getActivity().finish();
         startActivity(new Intent(getActivity(), LoginForm.class));
     }

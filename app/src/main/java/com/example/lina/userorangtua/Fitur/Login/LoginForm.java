@@ -49,11 +49,12 @@ public class LoginForm extends AppCompatActivity {
                     public void onResponse(Call<ModelResultLogin> call, Response<ModelResultLogin> response) {
                         modelResultLogin = response.body();
 
-                            session.setLogin(true, modelResultLogin.getResult().getIdorangtua());
+                            session.setLogin(true, modelResultLogin.getResult().getIdorangtua(), modelResultLogin.getResult().getId());
 
                             Log.d("username", modelResultLogin.getResult().getUsername());
                             Log.d("email", modelResultLogin.getResult().getEmail());
                             Log.d("idorangtua", String.valueOf(modelResultLogin.getResult().getIdorangtua()));
+                            Log.d("iduser", String.valueOf(modelResultLogin.getResult().getId()));
 
 
                             Intent intent = new Intent(LoginForm.this, ButtomNavigation.class);

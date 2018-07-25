@@ -36,6 +36,7 @@ public class RapotKursusStatusAdapter extends RecyclerView.Adapter<RapotKursusSt
     public void onBindViewHolder(RapotKursusStatusAdapter.ItemRowHolder holder, int i) {
         final RapotKursusStatusModel rapotKursusStatusModel = dataRapotkursus.get(i);
 
+        holder.tvPertemuanke.setText("Pertemuan Ke "+ String.valueOf(i + 1));
         holder.tvHari.setText(dataRapotkursus.get(i).getHari());
         holder.tvTanggal.setText(dataRapotkursus.get(i).getTanggal());
         holder.tvNamaguru.setText(dataRapotkursus.get(i).getNamaguru());
@@ -68,12 +69,13 @@ public class RapotKursusStatusAdapter extends RecyclerView.Adapter<RapotKursusSt
     }
 
     public class ItemRowHolder extends RecyclerView.ViewHolder {
-        protected TextView tvHari, tvTanggal, tvNamaguru, tvStatus;
+        protected TextView tvPertemuanke, tvHari, tvTanggal, tvNamaguru, tvStatus;
         protected ImageView logo;
         protected LinearLayout cvStatusrapot;
         public ItemRowHolder(View view) {
             super(view);
 
+            this.tvPertemuanke = (TextView) view.findViewById(R.id.tvpertemuanke);
             this.tvHari = (TextView) view.findViewById(R.id.tvhari);
             this.tvTanggal = (TextView) view.findViewById(R.id.tvtanggal);
             this.tvNamaguru = (TextView) view.findViewById(R.id.tvnamaguru);

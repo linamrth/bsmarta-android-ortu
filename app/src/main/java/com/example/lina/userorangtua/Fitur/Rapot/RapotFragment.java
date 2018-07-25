@@ -101,7 +101,7 @@ public class RapotFragment extends Fragment {
     }
 
     private void logout(){
-        session.setLogin(false,0);
+        session.setLogin(false,0, 0);
         getActivity().finish();
         startActivity(new Intent(getActivity(), LoginForm.class));
     }

@@ -3,32 +3,13 @@
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
     xmlns:williamchart="http://schemas.android.com/tools">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="vertical">
-        <HorizontalScrollView
+        <com.db.chart.view.LineChartView
+            android:id="@+id/chart"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fillViewport="true">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="350dp" >
-                <RelativeLayout
-                    android:id="@+id/RLayout_chart_container"
-                    android:orientation="horizontal"
-                    android:layout_width="fill_parent"
-                    android:layout_height="350dp" >
-                    <com.db.chart.view.LineChartView
-                        android:id="@+id/chart"
-                        android:layout_width="match_parent"
-                        android:layout_height="350dp"
-                        williamchart:chart_axis="false"/>
-                        <!--williamchart:chart_axisBorderSpacing="15dp"/>-->
-                </RelativeLayout>
-            </RelativeLayout>
-        </HorizontalScrollView>
-    </ScrollView>
+            android:layout_height="350dp"
+
+            williamchart:chart_axis="false"/>
+            <!--williamchart:chart_axisBorderSpacing="15dp"/>-->
 </LinearLayout>
 
 <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->

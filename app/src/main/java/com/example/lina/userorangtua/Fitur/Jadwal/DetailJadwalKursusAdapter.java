@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.lina.userorangtua.Model.Jadwal.DetailJadwalKursusModel;
@@ -55,6 +56,7 @@ public class DetailJadwalKursusAdapter extends RecyclerView.Adapter<DetailJadwal
 
     public class ItemRowHolder extends RecyclerView.ViewHolder {
         protected TextView tvNama, tvKelas, tvProgramlevel, tvLevel;
+        protected ImageView imgnama, imgkelas, imgprogram, imglevel;
         protected CardView cvDetailjadwalkursus;
 
         public ItemRowHolder(View view) {
@@ -64,6 +66,10 @@ public class DetailJadwalKursusAdapter extends RecyclerView.Adapter<DetailJadwal
             this.tvKelas = (TextView) view.findViewById(R.id.tvkelas);
             this.tvProgramlevel = (TextView) view.findViewById(R.id.tvprogram);
             this.tvLevel = (TextView) view.findViewById(R.id.tvlevel);
+            this.imgnama = (ImageView) view.findViewById(R.id.imgnama2);
+            this.imgkelas = (ImageView) view.findViewById(R.id.imgkelas2);
+            this.imgprogram = (ImageView) view.findViewById(R.id.imgprogram2);
+            this.imglevel = (ImageView) view.findViewById(R.id.imglevel2);
             this.cvDetailjadwalkursus = (CardView) view.findViewById(R.id.cvdetailjadwalkursus);
         }
     }

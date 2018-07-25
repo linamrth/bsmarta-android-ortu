@@ -58,7 +58,7 @@ public class RapotKursus extends AppCompatActivity {
                 tvLevel.setText("Level " + rapotKursusModel.getLevel());
                 tvNamaguru.setText(rapotKursusModel.getNamaguru());
                 tvTanggal.setText(rapotKursusModel.getTanggal());
-                tvPertemuanke.setText("Pertemuan Ke " + rapotKursusModel.getPertemuanke());
+                tvPertemuanke.setText(rapotKursusModel.getPertemuanke());
                 tvMateri.setText(rapotKursusModel.getMateri());
                 tvHalamanketercapaian.setText("Halaman " + rapotKursusModel.getHalamanketercapaian());
                 tvHasil.setText(rapotKursusModel.getHasil());

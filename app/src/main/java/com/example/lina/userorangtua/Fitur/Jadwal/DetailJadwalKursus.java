@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.lina.userorangtua.Api.ApiService;
@@ -23,6 +24,7 @@ public class DetailJadwalKursus extends AppCompatActivity {
     private RecyclerView rv;
     private DetailJadwalKursusAdapter detailJadwalKursusAdapter;
     private TextView tvNama, tvKelas, tvProgramlevel, tvLevel;
+    private ImageView imgnama, imgkelas, imgprogram, imglevel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

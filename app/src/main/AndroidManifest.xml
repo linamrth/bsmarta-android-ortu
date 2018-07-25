@@ -63,6 +63,15 @@
         <activity
             android:name=".Fitur.Rapot.GrafikPerkembangan"
             android:theme="@style/AppTheme2" />
+
+        <activity
+            android:name=".Fitur.Rapot.Grafikbaru"
+            android:theme="@style/AppTheme2" />
+
+        <activity
+            android:name=".Fitur.Rapot.GrafikFix"
+            android:theme="@style/AppTheme2" />
+
         <activity
             android:name=".Fitur.Pembayaran.DetailPembayaran"
             android:theme="@style/AppTheme2" />
@@ -84,9 +93,7 @@
         <activity
             android:name=".Fitur.Menu.Logout"
             android:theme="@style/AppTheme2" />
-        <activity
-            android:name=".Fitur.Rapot.GrafikFix"
-            android:theme="@style/AppTheme2" />
+
         <activity android:name=".Fitur.Notifikasi.Notifikasi" />
 
         <service android:name=".Fitur.Notifikasi.MyFirebaseInstanceIDService">

@@ -1,5 +1,6 @@
 package com.example.lina.userorangtua.Api;
 
+import com.example.lina.userorangtua.Model.EditPassword.EditpasswordResultModel;
 import com.example.lina.userorangtua.Model.Jadwal.DetailJadwalKursusResultModel;
 import com.example.lina.userorangtua.Model.Jadwal.DetailJadwalTrialResultModel;
 import com.example.lina.userorangtua.Model.Jadwal.JadwalKursusResultModel;
@@ -56,6 +57,14 @@ public class ApiService {
                 @Field("tanggungjawabdantingkahlaku") Integer tanggungjawabdantingkahlaku,
                 @Field("kerjasama") Integer kerjasama,
                 @Path("id") int id
+        );
+
+        @FormUrlEncoded
+        @POST("editpassword/editpassword")
+        Call<EditpasswordResultModel> editpassword(
+                @Field("_id") Integer _id,
+                @Field("password") String password,
+                @Field("repeatedPassword") String repeatedPassword
         );
     }
 
