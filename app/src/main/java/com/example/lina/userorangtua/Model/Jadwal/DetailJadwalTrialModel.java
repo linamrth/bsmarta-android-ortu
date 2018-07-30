@@ -1,9 +1,13 @@
 package com.example.lina.userorangtua.Model.Jadwal;
 
+import com.example.lina.userorangtua.Api.ApiService;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class DetailJadwalTrialModel {
+    @SerializedName("foto")
+    @Expose
+    private String foto;
     @SerializedName("namalengkap")
     @Expose
     private String namalengkap;
@@ -16,6 +20,14 @@ public class DetailJadwalTrialModel {
     @SerializedName("idtrial")
     @Expose
     private Integer idtrial;
+
+    public String getFoto() {
+        return ApiService.BASE_URL_FOTO+foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
+    }
 
     public String getNamalengkap() {
         return namalengkap;

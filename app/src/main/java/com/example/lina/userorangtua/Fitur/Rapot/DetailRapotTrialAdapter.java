@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.lina.userorangtua.Model.Rapot.DetailRapotTrialModel;
 import com.example.lina.userorangtua.R;
 
@@ -35,6 +36,7 @@ public class DetailRapotTrialAdapter extends RecyclerView.Adapter<DetailRapotTri
     public void onBindViewHolder(DetailRapotTrialAdapter.ItemRowHolder holder, int i) {
         final DetailRapotTrialModel detailRapotTrialModel = dataDetailrapot.get(i);
 
+        Glide.with(activity).load(dataDetailrapot.get(i).getFoto()).into(holder.ivSiswa);
         holder.tvNama.setText(dataDetailrapot.get(i).getNamalengkap());
         holder.tvKelas.setText(dataDetailrapot.get(i).getKelas());
         holder.tvProgram.setText(dataDetailrapot.get(i).getNamaprogram());
@@ -65,7 +67,7 @@ public class DetailRapotTrialAdapter extends RecyclerView.Adapter<DetailRapotTri
 
     public class ItemRowHolder extends RecyclerView.ViewHolder {
         protected TextView tvNama, tvKelas, tvProgram;
-        protected ImageView imgNama, imgKelas, imgProgram;
+        protected ImageView ivSiswa;
         protected CardView cvDetailRapotTrial;
 
         public ItemRowHolder(View view) {
@@ -74,9 +76,7 @@ public class DetailRapotTrialAdapter extends RecyclerView.Adapter<DetailRapotTri
             this.tvNama = (TextView) view.findViewById(R.id.tvnama);
             this.tvKelas = (TextView) view.findViewById(R.id.tvkelas);
             this.tvProgram = (TextView) view.findViewById(R.id.tvprogram);
-            this.imgNama = (ImageView) view.findViewById(R.id.imgnama1);
-            this.imgKelas = (ImageView) view.findViewById(R.id.imgkelas1);
-            this.imgProgram = (ImageView) view.findViewById(R.id.imgprogram1);
+            this.ivSiswa = (ImageView) view.findViewById(R.id.ivsiswa);
             this.cvDetailRapotTrial = (CardView) view.findViewById(R.id.cvdetailrapottrial);
         }
     }

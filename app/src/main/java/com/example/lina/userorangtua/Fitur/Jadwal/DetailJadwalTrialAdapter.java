@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.lina.userorangtua.Model.Jadwal.DetailJadwalTrialModel;
 import com.example.lina.userorangtua.R;
 
@@ -35,6 +36,7 @@ public class DetailJadwalTrialAdapter extends RecyclerView.Adapter<DetailJadwalT
     public void onBindViewHolder(DetailJadwalTrialAdapter.ItemRowHolder holder, int i) {
         final DetailJadwalTrialModel detailJadwalTrialModel = dataDetailjadwal.get(i);
 
+        Glide.with(activity).load(dataDetailjadwal.get(i).getFoto()).into(holder.ivSiswa);
         holder.tvNama.setText(dataDetailjadwal.get(i).getNamalengkap());
         holder.tvKelas.setText(dataDetailjadwal.get(i).getKelas());
         holder.tvProgramlevel.setText(dataDetailjadwal.get(i).getNamaprogram());
@@ -55,7 +57,7 @@ public class DetailJadwalTrialAdapter extends RecyclerView.Adapter<DetailJadwalT
 
     public class ItemRowHolder extends RecyclerView.ViewHolder{
         protected TextView tvNama, tvKelas, tvProgramlevel;
-        protected ImageView imgNama, imgKelas, imgProgram;
+        protected ImageView ivSiswa;
         protected CardView cvJadwaltrial;
         public ItemRowHolder(View view) {
             super(view);
@@ -63,9 +65,7 @@ public class DetailJadwalTrialAdapter extends RecyclerView.Adapter<DetailJadwalT
             this.tvNama = (TextView) view.findViewById(R.id.tvnama);
             this.tvKelas = (TextView) view.findViewById(R.id.tvkelas);
             this.tvProgramlevel = (TextView) view.findViewById(R.id.tvprogram);
-            this.imgNama = (ImageView) view.findViewById(R.id.imgnama1);
-            this.imgKelas = (ImageView) view.findViewById(R.id.imgkelas1);
-            this.imgProgram = (ImageView) view.findViewById(R.id.imgprogram1);
+            this.ivSiswa = (ImageView) view.findViewById(R.id.ivsiswa);
             this.cvJadwaltrial = (CardView) view.findViewById(R.id.cvjadwaltrial);
         }
     }

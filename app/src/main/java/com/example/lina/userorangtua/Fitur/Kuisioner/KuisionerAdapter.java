@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.lina.userorangtua.Model.Kuisioner.KuisionerModel;
 import com.example.lina.userorangtua.R;
 
@@ -35,6 +36,7 @@ public class KuisionerAdapter extends RecyclerView.Adapter<KuisionerAdapter.Item
     public void onBindViewHolder(ItemRowHolder holder, int i) {
         final KuisionerModel kuisionerModel = dataKuisioner.get(i);
 
+        Glide.with(activity).load(dataKuisioner.get(i).getFoto()).into(holder.ivSiswa);
         holder.tvNama.setText(dataKuisioner.get(i).getNamalengkap());
         holder.tvKelas.setText(dataKuisioner.get(i).getKelas());
         holder.tvProgram.setText(dataKuisioner.get(i).getNamaprogram());
@@ -56,7 +58,7 @@ public class KuisionerAdapter extends RecyclerView.Adapter<KuisionerAdapter.Item
 
     public class ItemRowHolder extends RecyclerView.ViewHolder {
         protected TextView tvNama, tvKelas, tvProgram, tvLevel;
-        protected ImageView imgnama, imgkelas, imgprogram, imglevel;
+        protected ImageView ivSiswa;
         protected CardView cvKuisioner;
         public ItemRowHolder(View view) {
             super(view);
@@ -65,10 +67,7 @@ public class KuisionerAdapter extends RecyclerView.Adapter<KuisionerAdapter.Item
             this.tvKelas = (TextView) view.findViewById(R.id.tvkelas);
             this.tvProgram = (TextView) view.findViewById(R.id.tvprogram);
             this.tvLevel = (TextView) view.findViewById(R.id.tvlevel);
-            this.imgnama = (ImageView) view.findViewById(R.id.imgnama2);
-            this.imgkelas = (ImageView) view.findViewById(R.id.imgkelas2);
-            this.imgprogram = (ImageView) view.findViewById(R.id.imgprogram2);
-            this.imglevel = (ImageView) view.findViewById(R.id.imglevel2);
+            this.ivSiswa = (ImageView) view.findViewById(R.id.ivsiswa);
             this.cvKuisioner = (CardView) view.findViewById(R.id.cvkuisioner);
         }
     }

@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.lina.userorangtua.Model.Kuisioner.KuisionerStatusModel;
 import com.example.lina.userorangtua.R;
 
@@ -36,6 +37,7 @@ public class KuisionerStatusAdapter extends RecyclerView.Adapter<KuisionerStatus
     public void onBindViewHolder(KuisionerStatusAdapter.ItemRowHolder holder, final int i) {
         final KuisionerStatusModel kuisionerStatusModel = dataKuisioner.get(i);
 
+        Glide.with(activity).load(dataKuisioner.get(i).getFoto()).into(holder.ivGuru);
         holder.tvTanggal.setText(dataKuisioner.get(i).getTanggal());
         holder.tvNamaguru.setText(dataKuisioner.get(i).getNamaguru());
         String status;
@@ -75,7 +77,7 @@ public class KuisionerStatusAdapter extends RecyclerView.Adapter<KuisionerStatus
 
     public class ItemRowHolder extends RecyclerView.ViewHolder {
         protected TextView tvTanggal, tvNamaguru, tvStatus;
-        protected ImageView logo;
+        protected ImageView logo, ivGuru;
         protected LinearLayout cvStatuskuisioner;
         public ItemRowHolder(View view) {
             super(view);
@@ -84,6 +86,7 @@ public class KuisionerStatusAdapter extends RecyclerView.Adapter<KuisionerStatus
             this.tvNamaguru = (TextView) view.findViewById(R.id.tvnamaguru);
             this.tvStatus = (TextView) view.findViewById(R.id.tvstatuskuisioner);
             this.logo = (ImageView) view.findViewById(R.id.logostatus);
+            this.ivGuru = (ImageView) view.findViewById(R.id.ivguru);
             this.cvStatuskuisioner = (LinearLayout) view.findViewById(R.id.cvstatuskuisioner);
         }
     }

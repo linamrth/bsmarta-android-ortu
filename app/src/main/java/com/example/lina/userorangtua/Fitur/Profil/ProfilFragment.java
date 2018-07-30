@@ -17,8 +17,10 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.lina.userorangtua.Api.ApiService;
 import com.example.lina.userorangtua.Fitur.Login.LoginForm;
 import com.example.lina.userorangtua.Fitur.Login.Session;
@@ -38,6 +40,7 @@ public class ProfilFragment extends Fragment {
     private ProfileResultModel profileResultModel;
     private ProfilFragmentAdapter profilFragmentAdapter;
     private TextView tvNamaortu,tvGender, tvTelepon;
+    private ImageView ivProfilortu;
     private RecyclerView rv;
     Session session;
 
@@ -54,6 +57,7 @@ public class ProfilFragment extends Fragment {
         AppCompatActivity activity = (AppCompatActivity) getActivity();
         activity.setSupportActionBar(toolbar);
 
+        ivProfilortu = view.findViewById(R.id.ivprofilortu);
         tvNamaortu = view.findViewById(R.id.tv_namaortu);
         tvGender = view.findViewById(R.id.tvgender);
         tvTelepon = view.findViewById(R.id.tvtelepon);
@@ -73,6 +77,7 @@ public class ProfilFragment extends Fragment {
                 rv.setAdapter(profilFragmentAdapter);
                 rv.getAdapter().notifyDataSetChanged();
 
+                Glide.with(view).load(profileResultModel.getResults().getFoto()).into(ivProfilortu);
                 tvNamaortu.setText(profileResultModel.getResults().getNamaortu());
                 String gender;
                 if(profileResultModel.getResults().getJeniskelamin().equals("L")){

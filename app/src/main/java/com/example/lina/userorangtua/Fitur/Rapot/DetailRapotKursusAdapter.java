@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.lina.userorangtua.Model.Rapot.DetailRapotKursusModel;
 import com.example.lina.userorangtua.R;
 
@@ -35,6 +36,7 @@ public class DetailRapotKursusAdapter extends RecyclerView.Adapter<DetailRapotKu
     public void onBindViewHolder(DetailRapotKursusAdapter.ItemRowHolder holder, int i) {
         final DetailRapotKursusModel detailRapotKursusModel = dataDetailrapot.get(i);
 
+        Glide.with(activity).load(dataDetailrapot.get(i).getFoto()).into(holder.ivSiswa);
         holder.tvNama.setText(dataDetailrapot.get(i).getNamalengkap());
         holder.tvKelas.setText(dataDetailrapot.get(i).getKelas());
         holder.tvProgram.setText(dataDetailrapot.get(i).getNamaprogram());
@@ -56,7 +58,7 @@ public class DetailRapotKursusAdapter extends RecyclerView.Adapter<DetailRapotKu
 
     public class ItemRowHolder extends RecyclerView.ViewHolder {
         protected TextView tvNama, tvKelas, tvProgram, tvLevel;
-        protected ImageView imgnama, imgkelas, imgprogram, imglevel;
+        protected ImageView ivSiswa;
         protected CardView cvDetailrapotkursus;
         public ItemRowHolder(View view) {
             super(view);
@@ -65,10 +67,7 @@ public class DetailRapotKursusAdapter extends RecyclerView.Adapter<DetailRapotKu
             this.tvKelas = (TextView) view.findViewById(R.id.tvkelas);
             this.tvProgram = (TextView) view.findViewById(R.id.tvprogram);
             this.tvLevel = (TextView) view.findViewById(R.id.tvlevel);
-            this.imgnama = (ImageView) view.findViewById(R.id.imgnama2);
-            this.imgkelas = (ImageView) view.findViewById(R.id.imgkelas2);
-            this.imgprogram = (ImageView) view.findViewById(R.id.imgprogram2);
-            this.imglevel = (ImageView) view.findViewById(R.id.imglevel2);
+            this.ivSiswa = (ImageView) view.findViewById(R.id.ivsiswa);
             this.cvDetailrapotkursus = (CardView) view.findViewById(R.id.cvdetailrapotkursus);
         }
     }

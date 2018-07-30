@@ -9,7 +9,8 @@
         android:id="@+id/cvstatuskuisioner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="2dp">
+        android:layout_marginBottom="2dp"
+        android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="horizontal"
@@ -18,9 +19,20 @@
             android:layout_height="match_parent"
             android:paddingLeft="10dp">
             <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivguru"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:paddingLeft="5dp"
                 android:layout_gravity="center"
                 android:layout_marginRight="10dp">
                 <TextView
@@ -64,14 +76,13 @@
                         android:textColor="#362240"
                         android:text="Sudah Terisi"/>
                 </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/colorPrimaryDark"
-                    android:layout_marginTop="3dp"/>
             </LinearLayout>
         </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginTop="3dp"/>
     </LinearLayout>
 
 </RelativeLayout>
